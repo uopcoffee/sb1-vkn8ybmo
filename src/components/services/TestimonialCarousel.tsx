@@ -36,7 +36,7 @@ const TestimonialCarousel: React.FC = () => {
               </div>
               <div>
                 <p className="text-xl md:text-2xl italic text-primary-500 mb-6">
-                  "{testimonial.quote}"
+                  “{testimonial.quote}”
                 </p>
                 <div>
                   <p className="font-bold text-primary-500">{testimonial.author}</p>

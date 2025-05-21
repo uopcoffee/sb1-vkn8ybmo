@@ -19,11 +19,11 @@ const ServicesCTA: React.FC = () => {
           <p className="text-xl mb-8 text-white/90">
             Let's discuss how we can help your startup build a strong financial foundation.
           </p>
-          <Button 
-            variant="primary" 
+          <Button
+            variant="primary"
             size="lg"
             to="/contact"
-            className="bg-gray text-accent-500 hover:bg-gray-50 hover:text-accent-500 transition-colors"
+            className="bg-white text-accent-500 hover:bg-gray-50 hover:text-accent-500 transition-colors"
           >
             Schedule a Consultation
           </Button>
