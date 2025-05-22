@@ -94,8 +94,8 @@ const HowItWorks: React.FC = () => {
             className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10"
           >
             <img
-              src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
-              alt="Team journey illustration"
+              src="/team-dynamics.svg"
+              alt="Team collaboration graphic"
               className="w-full h-48 object-cover rounded-lg mb-6"
             />
             <h3 className="text-2xl font-bold text-white mb-4 text-center">
@@ -125,8 +125,8 @@ const HowItWorks: React.FC = () => {
             className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10"
           >
             <img
-              src="https://images.pexels.com/photos/7681091/pexels-photo-7681091.jpeg"
-              alt="Services illustration"
+              src="/financial-visual.svg"
+              alt="Financial services graphic"
               className="w-full h-48 object-cover rounded-lg mb-6"
             />
             <h3 className="text-2xl font-bold text-white mb-4 text-center">

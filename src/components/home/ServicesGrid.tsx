@@ -11,7 +11,7 @@ interface Service {
 
 const services: Service[] = [
   {
-    icon: <BookOpen className="w-12 h-12 text-[#1B365D] stroke-[2]" />,
+    icon: <BookOpen className="w-12 h-12 text-primary-700 stroke-[2]" />,
     title: "Accounting Operations",
     description: "Full-cycle accounting and financial reporting",
     details: [
@@ -22,7 +22,7 @@ const services: Service[] = [
     ]
   },
   {
-    icon: <Handshake className="w-12 h-12 text-[#00857D] stroke-[2]" />,
+    icon: <Handshake className="w-12 h-12 text-accent-700 stroke-[2]" />,
     title: "Vendor Management",
     description: "End-to-end vendor relationship oversight",
     details: [
@@ -33,7 +33,7 @@ const services: Service[] = [
     ]
   },
   {
-    icon: <TrendingUp className="w-12 h-12 text-[#1B365D] stroke-[2]" />,
+    icon: <TrendingUp className="w-12 h-12 text-primary-700 stroke-[2]" />,
     title: "FP&A",
     description: "Strategic financial planning and analysis",
     details: [
@@ -44,7 +44,7 @@ const services: Service[] = [
     ]
   },
   {
-    icon: <Lightbulb className="w-12 h-12 text-[#00857D] stroke-[2]" />,
+    icon: <Lightbulb className="w-12 h-12 text-accent-700 stroke-[2]" />,
     title: "Special Projects",
     description: "Specialized financial initiatives",
     details: [
@@ -74,14 +74,14 @@ const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, i
         <div className="flex items-start gap-4">
           <div className="flex-shrink-0">{service.icon}</div>
           <div>
-            <h3 className="text-xl font-['Proxima Nova'] font-bold text-[#1B365D] mb-2">
+            <h3 className="text-xl font-bold text-primary-700 mb-2">
               {service.title}
             </h3>
             <p className="text-gray-600">{service.description}</p>
           </div>
         </div>
         <ChevronDown
-          className={`w-6 h-6 text-[#1B365D] transition-transform duration-300 flex-shrink-0 ${
+          className={`w-6 h-6 text-primary-700 transition-transform duration-300 flex-shrink-0 ${
             isExpanded ? 'rotate-180' : ''
           }`}
         />
@@ -100,7 +100,7 @@ const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, i
               <ul className="space-y-2 text-gray-600">
                 {service.details.map((detail, idx) => (
                   <li key={idx} className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#00857D]" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent-700" />
                     {detail}
                   </li>
                 ))}
@@ -118,7 +118,7 @@ const ServicesGrid: React.FC = () => {
     <section className="py-20 bg-gray-50">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1B365D] mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-700 mb-6">
             Modern Finance & G&A Advisory – Tailored for Startups
           </h2>
           <p className="text-lg text-gray-600">

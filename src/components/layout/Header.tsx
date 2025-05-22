@@ -28,31 +28,31 @@ const Header: React.FC = () => {
             alt="Ballast Financial" 
             className="h-10 w-auto"
           />
-          <span className="brand-text text-2xl font-semibold text-[#0D2C3E]">
+          <span className="brand-text text-2xl font-semibold text-primary-700">
             Ballast Financial
           </span>
         </Link>
 
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="text-[#0D2C3E] hover:text-[#87B6A4] transition-colors">
+          <Link to="/" className="text-primary-700 hover:text-accent-500 transition-colors">
             Home
           </Link>
-          <Link to="/about" className="text-[#0D2C3E] hover:text-[#87B6A4] transition-colors">
+          <Link to="/about" className="text-primary-700 hover:text-accent-500 transition-colors">
             About
           </Link>
-          <Link to="/services" className="text-[#0D2C3E] hover:text-[#87B6A4] transition-colors">
+          <Link to="/services" className="text-primary-700 hover:text-accent-500 transition-colors">
             Services
           </Link>
-          <Link 
+          <Link
             to="/contact"
-            className="btn btn-primary rounded-full bg-[#F1BDA3] hover:bg-[#87B6A4] text-white px-6 py-3"
+            className="btn btn-primary rounded-full bg-secondary-500 hover:bg-accent-500 text-white px-6 py-3"
           >
             Get in touch
           </Link>
         </div>
 
         <button
-          className="md:hidden text-[#0D2C3E]"
+          className="md:hidden text-primary-700"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -63,18 +63,18 @@ const Header: React.FC = () => {
       {isMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden">
           <div className="container-custom py-4 flex flex-col space-y-4">
-            <Link to="/" className="text-[#0D2C3E] hover:text-[#87B6A4] transition-colors">
+            <Link to="/" className="text-primary-700 hover:text-accent-500 transition-colors">
               Home
             </Link>
-            <Link to="/about" className="text-[#0D2C3E] hover:text-[#87B6A4] transition-colors">
+            <Link to="/about" className="text-primary-700 hover:text-accent-500 transition-colors">
               About
             </Link>
-            <Link to="/services" className="text-[#0D2C3E] hover:text-[#87B6A4] transition-colors">
+            <Link to="/services" className="text-primary-700 hover:text-accent-500 transition-colors">
               Services
             </Link>
-            <Link 
+            <Link
               to="/contact"
-              className="btn btn-primary rounded-full bg-[#F1BDA3] hover:bg-[#87B6A4] text-white w-full text-center px-6 py-3"
+              className="btn btn-primary rounded-full bg-secondary-500 hover:bg-accent-500 text-white w-full text-center px-6 py-3"
             >
               Get in touch
             </Link>

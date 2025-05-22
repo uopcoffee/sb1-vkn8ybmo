@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="flex flex-col text-center lg:text-left pt-32 lg:pt-0"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-500 leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-500 leading-tight mb-6">
               Finance Infrastructure for Venture‑Backed Startups
             </h1>
             <p className="text-xl text-primary-500/80 mb-8 max-w-xl mx-auto lg:mx-0">

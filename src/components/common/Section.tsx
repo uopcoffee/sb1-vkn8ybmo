@@ -19,9 +19,9 @@ const Section: React.FC<SectionProps> = ({
     <section
       id={id}
       className={`
-        py-16 md:py-24 
-        ${shade ? 'bg-primary-50' : 'bg-white'} 
-        ${pattern ? 'geometric-pattern' : ''} 
+        py-20 md:py-32
+        ${shade ? 'bg-primary-50' : 'bg-white'}
+        ${pattern ? 'geometric-pattern' : ''}
         ${className}
       `}
     >
