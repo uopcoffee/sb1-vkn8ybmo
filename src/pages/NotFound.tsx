@@ -1,9 +1,13 @@
 import React, { useEffect } from 'react';
+import { setMeta } from '../utils/seo';
 import Button from '../components/common/Button';
 
 const NotFound: React.FC = () => {
   useEffect(() => {
-    document.title = '404 | Ballast Financial';
+    setMeta({
+      title: '404 – Ballast Financial',
+      description: 'The page you are looking for does not exist.',
+    });
     window.scrollTo(0, 0);
   }, []);
 
