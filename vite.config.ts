@@ -11,4 +11,8 @@ export default defineConfig({
     host: true, // Listen on all local IPs
     port: 5173,
   },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+  },
 });
