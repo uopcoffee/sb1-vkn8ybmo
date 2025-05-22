@@ -18,3 +18,15 @@ To create a production build:
 ```bash
 npm run build
 ```
+
+Run the linter:
+
+```bash
+npm run lint
+```
+
+Run the test suite:
+
+```bash
+npm test
+```

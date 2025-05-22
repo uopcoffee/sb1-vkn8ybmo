@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { setMeta } from '../utils/seo';
 import { motion } from 'framer-motion';
 import Section from '../components/common/Section';
 import ServicesGrid from '../components/home/ServicesGrid';
@@ -7,7 +8,11 @@ import ServicesCTA from '../components/services/ServicesCTA';
 
 const Services: React.FC = () => {
   useEffect(() => {
-    document.title = 'Services | Ballast Financial';
+    setMeta({
+      title: 'Services – Ballast Financial | Startup Finance & Accounting',
+      description:
+        'Explore our outsourced CFO, accounting, and finance services built for venture-backed startups. Let Ballast streamline your books and reporting.',
+    });
     window.scrollTo(0, 0);
   }, []);
 

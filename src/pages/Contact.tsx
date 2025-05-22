@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { setMeta } from '../utils/seo';
 import { motion } from 'framer-motion';
 import ContactForm from '../components/contact/ContactForm';
 import CalendlyEmbed from '../components/contact/CalendlyEmbed';
@@ -7,7 +8,11 @@ import Button from '../components/common/Button';
 
 const Contact: React.FC = () => {
   useEffect(() => {
-    document.title = 'Contact | Ballast Financial';
+    setMeta({
+      title: 'Contact – Ballast Financial | Startup CFO & Accounting',
+      description:
+        'Get in touch with Ballast Financial for expert startup finance guidance. Schedule a consultation or message our team today.',
+    });
     window.scrollTo(0, 0);
   }, []);
 
