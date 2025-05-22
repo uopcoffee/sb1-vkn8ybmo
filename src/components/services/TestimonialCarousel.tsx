@@ -6,11 +6,11 @@ const TestimonialCarousel: React.FC = () => {
     quote: "Ballast Financial transformed our financial operations. Their expertise and guidance have been invaluable as we've scaled.",
     author: "Sarah Chen",
     title: "CEO, TechStart Inc.",
-    image: "https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg"
+    image: "/testimonial-avatar.svg"
   };
 
   return (
-    <section className="py-20 bg-[#FFF5F3]">
+    <section className="py-20 bg-secondary-50">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
