@@ -1,11 +1,16 @@
 import React, { useEffect } from 'react';
+import { setMeta } from '../utils/seo';
 import { motion } from 'framer-motion';
 import Section from '../components/common/Section';
 import Button from '../components/common/Button';
 
 const About: React.FC = () => {
   useEffect(() => {
-    document.title = 'About | Ballast Financial';
+    setMeta({
+      title: 'About – Ballast Financial | Startup CFO & Accounting',
+      description:
+        'Learn about our mission and team. Ballast Financial provides outsourced CFO services and financial operations for growth-focused startups.',
+    });
     window.scrollTo(0, 0);
   }, []);
 
