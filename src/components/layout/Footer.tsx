@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
                 Ballast Financial
               </span>
             </Link>
-            <p className="mt-4 text-gray-300">
+            <p className="mt-4 text-gray-200">
               Expert consulting for venture-backed startups navigating periods of rapid growth and uncertainty.
             </p>
           </div>
@@ -29,22 +29,22 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/" className="text-gray-200 hover:text-white transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/about" className="text-gray-200 hover:text-white transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/services" className="text-gray-200 hover:text-white transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/contact" className="text-gray-200 hover:text-white transition-colors">
                   Contact
                 </Link>
               </li>
@@ -55,22 +55,22 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-bold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/services" className="text-gray-200 hover:text-white transition-colors">
                   Accounting Operations
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/services" className="text-gray-200 hover:text-white transition-colors">
                   Vendor Management
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/services" className="text-gray-200 hover:text-white transition-colors">
                   FP&A
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/services" className="text-gray-200 hover:text-white transition-colors">
                   Special Projects
                 </Link>
               </li>
@@ -101,7 +101,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-700 pt-8 text-center">
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-gray-200">
             &copy; {currentYear} Ballast Financial. All rights reserved.
           </p>
         </div>
