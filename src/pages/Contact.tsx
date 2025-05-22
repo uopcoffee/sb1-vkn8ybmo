@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import ContactForm from '../components/contact/ContactForm';
 import CalendlyEmbed from '../components/contact/CalendlyEmbed';
 import ContactInfo from '../components/contact/ContactInfo';
+import Button from '../components/common/Button';
 
 const Contact: React.FC = () => {
   useEffect(() => {
@@ -48,7 +49,7 @@ const Contact: React.FC = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-12">
             <CalendlyEmbed />
-            <div className="lg:row-span-2">
+            <div className="lg:row-span-2" id="contact-form">
               <ContactForm />
             </div>
             <ContactInfo />
@@ -81,6 +82,9 @@ const Contact: React.FC = () => {
             <p className="text-lg text-primary-500/80 mb-8">
               Let's discuss how we can help your startup build a strong financial foundation.
             </p>
+            <Button variant="primary" size="lg" href="#contact-form" className="w-fit">
+              Let's Talk
+            </Button>
           </motion.div>
         </div>
       </section>

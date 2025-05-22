@@ -33,7 +33,7 @@ const Services: React.FC = () => {
               Financial Services for Growing Startups
             </h1>
             <p className="text-xl text-white/90 mb-8">
-              From day-to-day operations to strategic planning, we provide the financial infrastructure you need to scale.
+              We handle your daily accounting, payroll and reporting while guiding high-level finance strategy so you can scale confidently.
             </p>
           </motion.div>
         </div>

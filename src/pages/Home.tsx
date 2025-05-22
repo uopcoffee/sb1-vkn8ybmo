@@ -3,6 +3,7 @@ import { setMeta } from '../utils/seo';
 import Hero from '../components/home/Hero';
 import HowItWorks from '../components/home/HowItWorks';
 import WhyChoose from '../components/home/WhyChoose';
+import Testimonial from '../components/home/Testimonial';
 import BottomCTA from '../components/home/BottomCTA';
 
 const Home: React.FC = () => {
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
       <Hero />
       <HowItWorks />
       <WhyChoose />
+      <Testimonial />
       <BottomCTA />
     </>
   );

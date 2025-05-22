@@ -35,7 +35,7 @@ const About: React.FC = () => {
                 We're building the financial backbone for the next generation of innovative companies.
               </p>
               <p className="text-lg text-white/80 mb-8">
-                Ballast Financial was founded with a clear purpose: to give founders and startup teams the financial clarity and infrastructure they need to focus on what they do best—building great products and growing their business.
+                We founded Ballast Financial with a clear purpose: give founders and their teams the financial clarity and infrastructure needed to build great products and grow their business.
               </p>
               <Button 
                 variant="secondary" 
@@ -83,10 +83,10 @@ const About: React.FC = () => {
             className="space-y-6 text-lg"
           >
             <p className="text-primary-500/80">
-              What began as hatchconsulting, an exploration into helping startups find their footing, 
-              has evolved into Ballast Financial – the steady weight that keeps ventures stable through rough waters. 
-              Our deep understanding of startup challenges, combined with years of financial expertise, 
-              has shaped our approach to providing comprehensive financial infrastructure.
+              What began as hatchconsulting, our early effort to help startups find their footing,
+              has evolved into Ballast Financial – your steady weight through rough waters.
+              Our deep understanding of startup challenges, combined with years of financial expertise,
+              shapes how we deliver comprehensive financial infrastructure.
             </p>
             <p className="text-primary-500/80">
               Through working with countless startups, we've refined our services to address the unique 

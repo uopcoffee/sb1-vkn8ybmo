@@ -21,7 +21,8 @@ const Hero: React.FC = () => {
               Finance Infrastructure for Venture‑Backed Startups
             </h1>
             <p className="text-xl text-primary-500/80 mb-8 max-w-xl mx-auto lg:mx-0">
-              We streamline accounting, financial operations, and reporting — giving you the clarity and confidence to scale.
+              We serve as your startup’s outsourced finance team—handling accounting,
+              payroll and CFO strategy—so you can focus on growth.
             </p>
             <div className="flex justify-center lg:justify-start">
               <Button 
