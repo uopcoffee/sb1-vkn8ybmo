@@ -52,7 +52,8 @@ const Header: React.FC = () => {
         </div>
 
         <button
-          className="md:hidden text-primary-700"
+          className="md:hidden text-primary-700 w-11 h-11 flex items-center justify-center"
+          aria-label="Toggle menu"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
