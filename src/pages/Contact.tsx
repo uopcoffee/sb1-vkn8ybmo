@@ -41,12 +41,12 @@ const Contact: React.FC = () => {
 
       <section className="py-20 bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <CalendlyEmbed />
-              <ContactInfo />
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-12">
+            <CalendlyEmbed />
+            <div className="lg:row-span-2">
+              <ContactForm />
             </div>
-            <ContactForm />
+            <ContactInfo />
           </div>
         </div>
       </section>

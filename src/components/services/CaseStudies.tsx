@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Building2, Rocket, Cpu, Leaf, Briefcase, Code, Activity, Factory, Coffee } from 'lucide-react';
+import { Building2, Rocket, Cpu, Leaf, Briefcase, Code, Factory, Coffee } from 'lucide-react';
 
 interface CaseStudy {
   id: string;
