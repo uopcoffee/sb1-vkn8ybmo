@@ -46,8 +46,9 @@ const Header: React.FC = () => {
           <Link
             to="/contact"
             className="btn btn-primary rounded-full bg-secondary-500 hover:bg-accent-500 text-white px-6 py-3"
+            onClick={() => console.log('Header CTA clicked')}
           >
-            Get in touch
+            Schedule a consultation
           </Link>
         </div>
 
@@ -76,8 +77,9 @@ const Header: React.FC = () => {
             <Link
               to="/contact"
               className="btn btn-primary rounded-full bg-secondary-500 hover:bg-accent-500 text-white w-full text-center px-6 py-3"
+              onClick={() => console.log('Header CTA clicked')}
             >
-              Get in touch
+              Schedule a consultation
             </Link>
           </div>
         </div>

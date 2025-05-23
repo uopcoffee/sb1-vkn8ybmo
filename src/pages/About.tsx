@@ -37,13 +37,14 @@ const About: React.FC = () => {
               <p className="text-lg text-white/80 mb-8">
                 We founded Ballast Financial with a clear purpose: give founders and their teams the financial clarity and infrastructure needed to build great products and grow their business.
               </p>
-              <Button 
-                variant="secondary" 
-                size="lg" 
+              <Button
+                variant="secondary"
+                size="lg"
                 to="/contact"
                 className="w-fit px-8 py-4"
+                onClick={() => console.log('About hero CTA clicked')}
               >
-                Schedule a Consultation
+                Schedule a consultation
               </Button>
             </motion.div>
             <motion.div
@@ -169,8 +170,14 @@ const About: React.FC = () => {
           <p className="text-lg text-primary-500/80 mb-8">
             Let's discuss how we can help your startup build a solid financial foundation.
           </p>
-          <Button variant="primary" size="lg" to="/contact" className="w-fit">
-            Schedule a Consultation
+          <Button
+            variant="primary"
+            size="lg"
+            to="/contact"
+            className="w-fit"
+            onClick={() => console.log('About bottom CTA clicked')}
+          >
+            Schedule a consultation
           </Button>
         </motion.div>
       </Section>

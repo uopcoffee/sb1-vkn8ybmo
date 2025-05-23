@@ -35,9 +35,9 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Let's Talk About Your Financial Future
-            </h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                Let's talk about your financial future
+              </h1>
             <p className="text-xl text-primary-500/80 mb-8">
               Schedule a discovery call or reach out through any of our channels. We typically respond within 24 hours.
             </p>
@@ -82,9 +82,15 @@ const Contact: React.FC = () => {
             <p className="text-lg text-primary-500/80 mb-8">
               Let's discuss how we can help your startup build a strong financial foundation.
             </p>
-            <Button variant="primary" size="lg" href="#contact-form" className="w-fit">
-              Let's Talk
-            </Button>
+              <Button
+                variant="primary"
+                size="lg"
+                href="#contact-form"
+                className="w-fit"
+                onClick={() => console.log('Contact CTA clicked')}
+              >
+                Schedule a consultation
+              </Button>
           </motion.div>
         </div>
       </section>

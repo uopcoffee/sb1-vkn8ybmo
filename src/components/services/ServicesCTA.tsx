@@ -13,20 +13,21 @@ const ServicesCTA: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Ready to Transform Your Financial Operations?
-          </h2>
-          <p className="text-xl mb-8 text-white/90">
-            Let's discuss how we can help your startup build a strong financial foundation.
-          </p>
-          <Button
-            variant="primary"
-            size="lg"
-            to="/contact"
-            className="bg-white text-accent-500 hover:bg-gray-50 hover:text-accent-500 transition-colors"
-          >
-            Schedule a Consultation
-          </Button>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Ready to Transform Your Financial Operations?
+            </h2>
+            <p className="text-xl mb-8 text-white/90">
+              Let's discuss how we can help your startup build a strong financial foundation.
+            </p>
+            <Button
+              variant="primary"
+              size="lg"
+              to="/contact"
+              className="bg-white text-accent-500 hover:bg-gray-50 hover:text-accent-500 transition-colors"
+              onClick={() => console.log('Services CTA clicked')}
+            >
+              Schedule a consultation
+            </Button>
         </motion.div>
       </div>
     </section>
