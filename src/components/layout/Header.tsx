@@ -43,6 +43,12 @@ const Header: React.FC = () => {
           <Link to="/services" className="text-primary-700 hover:text-accent-500 transition-colors">
             Services
           </Link>
+          <Link to="/faq" className="text-primary-700 hover:text-accent-500 transition-colors">
+            FAQ
+          </Link>
+          <Link to="/blog" className="text-primary-700 hover:text-accent-500 transition-colors">
+            Blog
+          </Link>
           <Link
             to="/contact"
             className="btn btn-primary rounded-full bg-secondary-500 hover:bg-accent-500 text-white px-6 py-3"
@@ -73,6 +79,12 @@ const Header: React.FC = () => {
             </Link>
             <Link to="/services" className="text-primary-700 hover:text-accent-500 transition-colors">
               Services
+            </Link>
+            <Link to="/faq" className="text-primary-700 hover:text-accent-500 transition-colors">
+              FAQ
+            </Link>
+            <Link to="/blog" className="text-primary-700 hover:text-accent-500 transition-colors">
+              Blog
             </Link>
             <Link
               to="/contact"
