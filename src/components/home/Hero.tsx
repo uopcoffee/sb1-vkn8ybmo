@@ -25,13 +25,14 @@ const Hero: React.FC = () => {
               payroll and CFO strategy—so you can focus on growth.
             </p>
             <div className="flex justify-center lg:justify-start">
-              <Button 
-                variant="primary" 
-                size="lg" 
+              <Button
+                variant="primary"
+                size="lg"
                 to="/contact"
                 className="w-fit px-8 py-4"
+                onClick={() => console.log('Hero CTA clicked')}
               >
-                Schedule a Consultation
+                Schedule a consultation
               </Button>
             </div>
           </motion.div>
