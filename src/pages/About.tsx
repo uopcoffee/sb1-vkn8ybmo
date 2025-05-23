@@ -1,21 +1,20 @@
 import React, { useEffect } from 'react';
-import { setMeta } from '../utils/seo';
+import Meta from '../components/Meta';
 import { motion } from 'framer-motion';
 import Section from '../components/common/Section';
 import Button from '../components/common/Button';
 
 const About: React.FC = () => {
   useEffect(() => {
-    setMeta({
-      title: 'About – Ballast Financial | Startup CFO & Accounting',
-      description:
-        'Learn about our mission and team. Ballast Financial provides outsourced CFO services and financial operations for growth-focused startups.',
-    });
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="pt-24">
+      <Meta
+        title="About – Ballast Financial | Startup CFO & Accounting"
+        description="Learn about our mission and team. Ballast Financial provides outsourced CFO services and financial operations for growth-focused startups."
+      />
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-700 opacity-95" />
