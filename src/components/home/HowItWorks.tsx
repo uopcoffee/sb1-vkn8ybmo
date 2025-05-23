@@ -97,6 +97,7 @@ const HowItWorks: React.FC = () => {
               src="/team-dynamics.svg"
               alt="Team collaboration graphic"
               className="w-full h-48 object-cover rounded-lg mb-6"
+              loading="lazy"
             />
             <h3 className="text-2xl font-bold text-white mb-4 text-center">
               Discover Our Story
@@ -128,6 +129,7 @@ const HowItWorks: React.FC = () => {
               src="/financial-visual.svg"
               alt="Financial services graphic"
               className="w-full h-48 object-cover rounded-lg mb-6"
+              loading="lazy"
             />
             <h3 className="text-2xl font-bold text-white mb-4 text-center">
               Explore What We Offer

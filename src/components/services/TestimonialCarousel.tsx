@@ -32,6 +32,7 @@ const TestimonialCarousel: React.FC = () => {
                   src={testimonial.image}
                   alt={testimonial.author}
                   className="w-full h-full object-cover rounded-full"
+                  loading="lazy"
                 />
               </div>
               <div>

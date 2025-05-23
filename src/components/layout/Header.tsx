@@ -34,13 +34,13 @@ const Header: React.FC = () => {
         </Link>
 
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="text-primary-700 hover:text-accent-500 transition-colors">
+          <Link to="/" className="text-primary-700 hover:text-accent-900 transition-colors">
             Home
           </Link>
-          <Link to="/about" className="text-primary-700 hover:text-accent-500 transition-colors">
+          <Link to="/about" className="text-primary-700 hover:text-accent-900 transition-colors">
             About
           </Link>
-          <Link to="/services" className="text-primary-700 hover:text-accent-500 transition-colors">
+          <Link to="/services" className="text-primary-700 hover:text-accent-900 transition-colors">
             Services
           </Link>
           <Link
@@ -64,13 +64,13 @@ const Header: React.FC = () => {
       {isMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden">
           <div className="container-custom py-4 flex flex-col space-y-4">
-            <Link to="/" className="text-primary-700 hover:text-accent-500 transition-colors">
+            <Link to="/" className="text-primary-700 hover:text-accent-900 transition-colors">
               Home
             </Link>
-            <Link to="/about" className="text-primary-700 hover:text-accent-500 transition-colors">
+            <Link to="/about" className="text-primary-700 hover:text-accent-900 transition-colors">
               About
             </Link>
-            <Link to="/services" className="text-primary-700 hover:text-accent-500 transition-colors">
+            <Link to="/services" className="text-primary-700 hover:text-accent-900 transition-colors">
               Services
             </Link>
             <Link
