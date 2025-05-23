@@ -23,7 +23,7 @@ const ServicesCTA: React.FC = () => {
             variant="primary"
             size="lg"
             to="/contact"
-            className="bg-white text-accent-500 hover:bg-gray-50 hover:text-accent-500 transition-colors"
+            className="bg-white text-accent-900 hover:bg-gray-50 hover:text-accent-900 transition-colors"
           >
             Schedule a Consultation
           </Button>
