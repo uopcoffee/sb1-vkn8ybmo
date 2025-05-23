@@ -1,23 +1,14 @@
-# sb1-vkn8ybmo
+# Ballast Financial
 
 Demo project for a financial services website built with React and Vite.
 
 [Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/uopcoffee/sb1-vkn8ybmo)
 
-## Getting Started
+## Usage
 
-Install dependencies and start the development server:
-
-```bash
-npm install
-npm run dev
-```
-
-To create a production build:
-
-```bash
-npm run build
-```
+1. `npm install`
+2. `npm run dev` for development
+3. `npm run build` for production
 
 Run the linter:
 
