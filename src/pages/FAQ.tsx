@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import React, { useEffect } from 'react';
-import { setMeta } from '../utils/seo';
+import Meta from '../components/Meta';
 import HeroSection from '../components/common/HeroSection';
 
 const FAQ: React.FC = () => {
@@ -16,15 +16,15 @@ const FAQ: React.FC = () => {
   ];
 
   useEffect(() => {
-    setMeta({
-      title: 'FAQ \u2013 Ballast Financial',
-      description: 'Frequently asked questions about Ballast Financial services.'
-    });
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="pt-24">
+      <Meta
+        title="FAQ – Ballast Financial"
+        description="Frequently asked questions about Ballast Financial services."
+      />
       <HeroSection title="Frequently Asked Questions" />
       <section className="py-20">
         <div className="container-custom space-y-8">

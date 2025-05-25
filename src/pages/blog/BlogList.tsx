@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { setMeta } from '../../utils/seo';
+import Meta from '../../components/Meta';
 import HeroSection from '../../components/common/HeroSection';
 
 const posts = [
@@ -10,12 +10,12 @@ const posts = [
 
 const BlogList: React.FC = () => {
   useEffect(() => {
-    setMeta({ title: 'Blog \u2013 Ballast Financial' });
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="pt-24">
+      <Meta title="Blog – Ballast Financial" />
       <HeroSection title="Blog" />
       <section className="py-20">
         <div className="container-custom">

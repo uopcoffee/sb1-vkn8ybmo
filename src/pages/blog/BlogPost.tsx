@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { setMeta } from '../../utils/seo';
+import Meta from '../../components/Meta';
 import HeroSection from '../../components/common/HeroSection';
 
 const BlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
 
   useEffect(() => {
-    setMeta({ title: `${slug} \u2013 Ballast Blog` });
     window.scrollTo(0, 0);
   }, [slug]);
 
   return (
     <div className="pt-24">
+      <Meta title={`${slug ?? ''} – Ballast Blog`} />
       <HeroSection title={slug ?? ''} />
       <section className="py-20">
         <div className="container-custom">
