@@ -49,7 +49,7 @@ const About: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-500 mb-6">Our Story</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-500 mb-6">Who We Are</h2>
           </motion.div>
 
           <motion.div
@@ -60,15 +60,12 @@ const About: React.FC = () => {
             className="space-y-6 text-lg"
           >
             <p className="text-primary-500/80">
-              What began as hatchconsulting, our early effort to help startups find their footing,
-              has evolved into Ballast Financial – your steady weight through rough waters.
-              Our deep understanding of startup challenges, combined with years of financial expertise,
-              shapes how we deliver comprehensive financial infrastructure.
-            </p>
-            <p className="text-primary-500/80">
-              Through working with countless startups, we've refined our services to address the unique
-              challenges faced by growing ventures. Today, we're proud to serve as the financial backbone
-              for innovative companies across various sectors, providing the stability they need to thrive.
+              At Ballast, we’re not your typical finance people—and that’s intentional. Seasoned CFOs, controllers,
+              and operators pair sharp financial insight with real-world startup empathy. Our model pairs senior
+              finance leadership with a seasoned global team and AI-driven workflows, helping us ramp quickly,
+              control costs, and pave the way for full digital automation. We don’t just run GAAP checklists;
+              we right-size G&amp;A for where your company is now and architect processes for where you’re headed,
+              turning back-office pain into strategic clarity.
             </p>
             <div className="mt-12 text-center">
               <p className="text-xl font-medium italic text-primary-500 mb-8">

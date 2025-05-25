@@ -7,18 +7,23 @@ const HowItWorks: React.FC = () => {
   const steps = [
     {
       icon: <ClipboardCheck className="w-12 h-12 text-accent-900" />,
-      title: "Client Assessment",
-      description: "We start with a comprehensive review of your current financial operations, tech stack, and growth goals to create a tailored implementation plan.",
+      title: 'Flexible scope',
+      description: 'hourly or project based—no long-term lock-in',
     },
     {
       icon: <ArrowRightCircle className="w-12 h-12 text-accent-900" />,
-      title: "Team Integration",
-      description: "Our team seamlessly integrates with your existing workflows, implementing automated processes and establishing clear financial controls.",
+      title: 'Senior-led, global execution',
+      description: 'U.S. leadership plus a vetted offshore team for 24-hour momentum and predictable cost',
     },
     {
       icon: <BarChart3 className="w-12 h-12 text-accent-900" />,
-      title: "Ongoing Partnership",
-      description: "We provide continuous support, monthly reporting, and strategic insights to help guide your financial decisions and fuel growth.",
+      title: 'Integrated stack',
+      description: 'best-in-class tools stitched together for efficiency, insight, and audit-ready data',
+    },
+    {
+      icon: <ClipboardCheck className="w-12 h-12 text-accent-900" />,
+      title: 'Partner mindset',
+      description: 'tight coordination with auditors, tax, and legal so nothing falls through the cracks',
     },
   ];
 
@@ -46,12 +51,12 @@ const HowItWorks: React.FC = () => {
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            How We Work Together
+            How We Work
           </h2>
           <p className="text-lg text-white/80">
-            A streamlined process designed to get your financial operations running smoothly and efficiently.
+            We pair senior leadership with global execution and automation.
           </p>
-        </div>
+          </div>
 
         <motion.div 
           className="relative"

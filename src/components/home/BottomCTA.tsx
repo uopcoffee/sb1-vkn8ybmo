@@ -13,12 +13,12 @@ const BottomCTA: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-500">
-              Let's discuss your financial strategy
-            </h2>
-            <p className="text-lg md:text-xl mb-8 text-primary-500/90">
-              Get your financial report and see how we can strengthen your operations.
-            </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-500">
+            Choosing the Right Finance Partner
+          </h2>
+          <p className="text-lg md:text-xl mb-8 text-primary-500/90">
+            Ballast starts every engagement with a rapid diagnostic, then assembles the right blend of senior leadership, global execution, and automation to reach your next milestone. And if another firm is the better match, we’ll point you there.
+          </p>
             <Button
               variant="primary"
               size="lg"

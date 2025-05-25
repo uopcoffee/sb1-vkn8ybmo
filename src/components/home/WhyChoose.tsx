@@ -4,21 +4,27 @@ import { Briefcase, BarChart2, Shield } from 'lucide-react';
 const features = [
   {
     icon: <Briefcase className="w-12 h-12 text-accent-900" />,
-    title: 'Startup Expertise',
+    title: 'Startup specialists',
     description:
-      'Guidance from professionals who have supported high-growth ventures.',
+      'operators who have scaled finance teams inside venture-backed businesses',
   },
   {
     icon: <Shield className="w-12 h-12 text-accent-900" />,
-    title: 'Fractional CFO Service',
+    title: 'Execution first',
     description:
-      'Strategic leadership without the full-time expense.',
+      'we own the close and the dashboards\u2014not just the slide deck',
   },
   {
     icon: <BarChart2 className="w-12 h-12 text-accent-900" />,
-    title: 'Venture-Backed Focus',
+    title: 'Built-in efficiency',
     description:
-      'Trusted by founders to manage millions in funding securely.',
+      'automation and global delivery keep quality high and costs in check',
+  },
+  {
+    icon: <Briefcase className="w-12 h-12 text-accent-900" />,
+    title: 'Scales with you',
+    description:
+      'processes and systems designed to flex from Series A to pre-IPO',
   },
 ];
 
@@ -28,10 +34,10 @@ const WhyChoose: React.FC = () => {
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-500 mb-4">
-            Why Choose Ballast
+            Why Ballast
           </h2>
           <p className="text-lg text-primary-500/80">
-            We combine startup savvy with seasoned finance leadership.
+            Startup specialists, global scale, and built-in efficiency.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
