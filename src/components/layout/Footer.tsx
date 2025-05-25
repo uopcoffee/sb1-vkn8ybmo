@@ -11,10 +11,11 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="flex items-center gap-3">
-              <img 
-                src="/ballast_logo.svg" 
+              <img
+                src="/ballast_logo.svg"
                 alt="Ballast Financial"
-                className="h-10 w-auto brightness-0 invert" 
+                className="h-10 w-auto brightness-0 invert"
+                loading="lazy"
               />
               <span className="brand-text text-2xl font-semibold text-white">
                 Ballast Financial

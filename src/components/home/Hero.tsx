@@ -48,6 +48,7 @@ const Hero: React.FC = () => {
                 alt="Financial infrastructure illustration"
                 className="w-auto h-[125%] transform-gpu scale-125 object-bottom object-contain pr-[10px] pb-0"
                 style={{ transformOrigin: 'bottom center' }}
+                loading="lazy"
               />
             </div>
           </motion.div>
