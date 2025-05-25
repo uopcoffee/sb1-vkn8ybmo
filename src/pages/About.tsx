@@ -52,10 +52,8 @@ const About: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="hidden lg:block"
             >
-              <img 
-                src="/aboutus-hero.png" 
-                alt="Team collaborating on financial analysis"
-                className="rounded-xl shadow-xl w-full max-w-2xl mx-auto filter brightness-95 contrast-105"
+              <div
+                className="rounded-xl shadow-xl w-full max-w-2xl mx-auto h-96 bg-[url('/ballast-brand-background.svg')] bg-cover bg-center"
               />
             </motion.div>
           </div>
