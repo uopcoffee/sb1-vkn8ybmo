@@ -3,19 +3,19 @@ import { Briefcase, BarChart2, Shield } from 'lucide-react';
 
 const features = [
   {
-    icon: <Briefcase className="w-12 h-12 text-accent-500" />,
+  icon: <Briefcase className="w-12 h-12 text-accent-700" />,
     title: 'Startup Expertise',
     description:
       'Guidance from professionals who have supported high-growth ventures.',
   },
   {
-    icon: <Shield className="w-12 h-12 text-accent-500" />,
+  icon: <Shield className="w-12 h-12 text-accent-700" />,
     title: 'Fractional CFO Service',
     description:
       'Strategic leadership without the full-time expense.',
   },
   {
-    icon: <BarChart2 className="w-12 h-12 text-accent-500" />,
+  icon: <BarChart2 className="w-12 h-12 text-accent-700" />,
     title: 'Venture-Backed Focus',
     description:
       'Trusted by founders to manage millions in funding securely.',

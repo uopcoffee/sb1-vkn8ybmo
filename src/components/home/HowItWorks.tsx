@@ -6,17 +6,17 @@ import Button from '../common/Button';
 const HowItWorks: React.FC = () => {
   const steps = [
     {
-      icon: <ClipboardCheck className="w-12 h-12 text-accent-500" />,
+      icon: <ClipboardCheck className="w-12 h-12 text-accent-700" />,
       title: "Client Assessment",
       description: "We start with a comprehensive review of your current financial operations, tech stack, and growth goals to create a tailored implementation plan.",
     },
     {
-      icon: <ArrowRightCircle className="w-12 h-12 text-accent-500" />,
+      icon: <ArrowRightCircle className="w-12 h-12 text-accent-700" />,
       title: "Team Integration",
       description: "Our team seamlessly integrates with your existing workflows, implementing automated processes and establishing clear financial controls.",
     },
     {
-      icon: <BarChart3 className="w-12 h-12 text-accent-500" />,
+      icon: <BarChart3 className="w-12 h-12 text-accent-700" />,
       title: "Ongoing Partnership",
       description: "We provide continuous support, monthly reporting, and strategic insights to help guide your financial decisions and fuel growth.",
     },
@@ -71,7 +71,7 @@ const HowItWorks: React.FC = () => {
                   <div className="bg-white/5 rounded-full w-20 h-20 flex items-center justify-center mb-6 mx-auto">
                     {step.icon}
                   </div>
-                  <div className="absolute top-0 right-0 w-8 h-8 bg-accent-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg transform translate-x-1/4 -translate-y-1/4">
+                    <div className="absolute top-0 right-0 w-8 h-8 bg-accent-700 rounded-full flex items-center justify-center text-white font-bold shadow-lg transform translate-x-1/4 -translate-y-1/4">
                     {index + 1}
                   </div>
                 </div>
@@ -97,6 +97,7 @@ const HowItWorks: React.FC = () => {
               src="/team-dynamics.svg"
               alt="Team collaboration graphic"
               className="w-full h-48 object-cover rounded-lg mb-6"
+              loading="lazy"
             />
             <h3 className="text-2xl font-bold text-white mb-4 text-center">
               Discover Our Story
@@ -128,6 +129,7 @@ const HowItWorks: React.FC = () => {
               src="/financial-visual.svg"
               alt="Financial services graphic"
               className="w-full h-48 object-cover rounded-lg mb-6"
+              loading="lazy"
             />
             <h3 className="text-2xl font-bold text-white mb-4 text-center">
               Explore What We Offer
