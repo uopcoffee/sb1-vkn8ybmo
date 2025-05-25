@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BookOpen, Handshake, TrendingUp, Lightbulb, ChevronDown } from 'lucide-react';
+import { BookOpen, Handshake, TrendingUp, ChevronDown } from 'lucide-react';
 
 interface Service {
   icon: JSX.Element;
@@ -10,56 +10,26 @@ interface Service {
 }
 
 const services: Service[] = [
+
   {
     icon: <BookOpen className="w-12 h-12 text-primary-700 stroke-[2]" />,
-    title: "Accounting Operations",
-    description:
-      "Monthly bookkeeping and GAAP financial reporting. We reconcile accounts, handle accruals and deliver investor-ready statements.",
-    details: [
-      "Monthly close process",
-      "Financial statement preparation",
-      "Revenue recognition",
-      "Expense management"
-    ]
+    title: 'Recurring Operations',
+    description: 'accounting, month-end close, AP/AR, compliance, and management reporting',
+    details: []
   },
   {
     icon: <Handshake className="w-12 h-12 text-accent-700 stroke-[2]" />,
-    title: "Vendor Management",
-    description:
-      "Vendor onboarding, contract management and payment processing. Our controls ensure compliance and optimize spend across your supply chain.",
-    details: [
-      "Vendor selection and onboarding",
-      "Contract negotiation",
-      "Payment processing",
-      "Relationship management"
-    ]
+    title: 'Finance Advisory & Oversight',
+    description: 'fractional finance leadership, FP&A, board and investor reporting, capital planning',
+    details: []
   },
   {
     icon: <TrendingUp className="w-12 h-12 text-primary-700 stroke-[2]" />,
-    title: "FP&A",
-    description:
-      "Budgeting, forecasting and KPI analysis that puts data behind every decision. Our reporting gives clarity from boardroom to runway.",
-    details: [
-      "Budgeting and forecasting",
-      "KPI tracking and analysis",
-      "Board deck preparation",
-      "Investor materials"
-    ]
-  },
-  {
-    icon: <Lightbulb className="w-12 h-12 text-accent-700 stroke-[2]" />,
-    title: "Special Projects",
-    description:
-      "Support for due diligence, system builds and other projects. We lead integrations and process improvements to keep finance moving forward.",
-    details: [
-      "Due diligence support",
-      "System implementations",
-      "Process optimization",
-      "Strategic planning"
-    ]
+    title: 'Digital Transformation',
+    description: 'system selection and integration, process automation, data architecture, and workflow design',
+    details: []
   }
 ];
-
 const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, index }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -123,10 +93,10 @@ const ServicesGrid: React.FC = () => {
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-700 mb-6">
-            Modern Finance & G&A Advisory – Tailored for Startups
+            What We Do
           </h2>
           <p className="text-lg text-gray-600">
-            Comprehensive financial services designed to help startups scale with confidence
+            We deliver end-to-end finance capability across three complementary lanes:
           </p>
         </div>
 
