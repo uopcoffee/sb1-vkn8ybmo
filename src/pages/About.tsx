@@ -3,6 +3,7 @@ import Meta from '../components/Meta';
 import { motion } from 'framer-motion';
 import Section from '../components/common/Section';
 import Button from '../components/common/Button';
+import HeroSection from '../components/common/HeroSection';
 
 const About: React.FC = () => {
   useEffect(() => {
@@ -16,49 +17,25 @@ const About: React.FC = () => {
         description="Learn about our mission and team. Ballast Financial provides outsourced CFO services and financial operations for growth-focused startups."
       />
       {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-700 opacity-95" />
-        <div className="absolute inset-0 bg-[url('/ballast-brand-background.svg')] bg-cover bg-center opacity-10" />
-        <div className="container-custom relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="max-w-xl"
-            >
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Our Mission
-              </h1>
-              <p className="text-xl md:text-2xl text-white/90 mb-6">
-                We're building the financial backbone for the next generation of innovative companies.
-              </p>
-              <p className="text-lg text-white/80 mb-8">
-                We founded Ballast Financial with a clear purpose: give founders and their teams the financial clarity and infrastructure needed to build great products and grow their business.
-              </p>
-              <Button
-                variant="secondary"
-                size="lg"
-                to="/contact"
-                className="w-fit px-8 py-4"
-                onClick={() => console.log('About hero CTA clicked')}
-              >
-                Schedule a consultation
-              </Button>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="hidden lg:block"
-            >
-              <div
-                className="rounded-xl shadow-xl w-full max-w-2xl mx-auto h-96 bg-[url('/ballast-brand-background.svg')] bg-cover bg-center"
-              />
-            </motion.div>
-          </div>
+      <HeroSection
+        title="Our Mission"
+        subtitle="We're building the financial backbone for the next generation of innovative companies."
+        gradientClass="bg-gradient-to-br from-primary-600 to-primary-700"
+        textWhite
+      >
+        <div className="mb-8 text-white/80">
+          We founded Ballast Financial with a clear purpose: give founders and their teams the financial clarity and infrastructure needed to build great products and grow their business.
         </div>
-      </section>
+        <Button
+          variant="secondary"
+          size="lg"
+          to="/contact"
+          className="w-fit px-8 py-4"
+          onClick={() => console.log('About hero CTA clicked')}
+        >
+          Schedule a consultation
+        </Button>
+      </HeroSection>
 
       {/* Our Story Section */}
       <Section shade>
