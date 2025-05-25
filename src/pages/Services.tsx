@@ -1,43 +1,30 @@
 import React, { useEffect } from 'react';
-import { setMeta } from '../utils/seo';
+import Meta from '../components/Meta';
 import { motion } from 'framer-motion';
 import Section from '../components/common/Section';
 import ServicesGrid from '../components/home/ServicesGrid';
 import CaseStudies from '../components/services/CaseStudies';
 import ServicesCTA from '../components/services/ServicesCTA';
+import HeroSection from '../components/common/HeroSection';
 
 const Services: React.FC = () => {
   useEffect(() => {
-    setMeta({
-      title: 'Services – Ballast Financial | Startup Finance & Accounting',
-      description:
-        'Explore our outsourced CFO, accounting, and finance services built for venture-backed startups. Let Ballast streamline your books and reporting.',
-    });
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="pt-24">
+      <Meta
+        title="Services – Ballast Financial | Startup Finance & Accounting"
+        description="Explore our outsourced CFO, accounting, and finance services built for venture-backed startups. Let Ballast streamline your books and reporting."
+      />
       {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-700 opacity-95" />
-        <div className="absolute inset-0 bg-[url('/ballast-brand-background.svg')] bg-cover bg-center opacity-10" />
-        <div className="container-custom relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Financial Services for Growing Startups
-            </h1>
-            <p className="text-xl text-white/90 mb-8">
-              We handle your daily accounting, payroll and reporting while guiding high-level finance strategy so you can scale confidently.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <HeroSection
+        title="Financial Services for Growing Startups"
+        subtitle="We handle your daily accounting, payroll and reporting while guiding high-level finance strategy so you can scale confidently."
+        gradientClass="bg-gradient-to-br from-primary-600 to-primary-700"
+        textWhite
+      />
 
       {/* Services Grid Section */}
       <Section shade>

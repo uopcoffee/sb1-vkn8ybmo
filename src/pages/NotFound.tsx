@@ -1,18 +1,15 @@
 import React, { useEffect } from 'react';
-import { setMeta } from '../utils/seo';
+import Meta from '../components/Meta';
 import Button from '../components/common/Button';
 
 const NotFound: React.FC = () => {
   useEffect(() => {
-    setMeta({
-      title: '404 – Ballast Financial',
-      description: 'The page you are looking for does not exist.',
-    });
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="pt-24 text-center px-4">
+      <Meta title="404 – Ballast Financial" description="The page you are looking for does not exist." />
       <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary-500">
         Page Not Found
       </h1>

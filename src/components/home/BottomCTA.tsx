@@ -13,20 +13,21 @@ const BottomCTA: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-500">
-            Let's Discuss Your Financial Strategy
-          </h2>
-          <p className="text-lg md:text-xl mb-8 text-primary-500/90">
-            Schedule a consultation to explore how we can help strengthen your financial operations.
-          </p>
-          <Button 
-            variant="primary" 
-            size="lg"
-            to="/contact"
-            className="w-fit"
-          >
-            Schedule a Consultation
-          </Button>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-500">
+              Let's discuss your financial strategy
+            </h2>
+            <p className="text-lg md:text-xl mb-8 text-primary-500/90">
+              Get your financial report and see how we can strengthen your operations.
+            </p>
+            <Button
+              variant="primary"
+              size="lg"
+              to="/contact"
+              className="w-fit"
+              onClick={() => console.log('Bottom CTA clicked')}
+            >
+              Get Your Financial Report
+            </Button>
         </motion.div>
       </div>
     </section>

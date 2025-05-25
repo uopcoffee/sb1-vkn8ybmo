@@ -1,23 +1,40 @@
 # Ballast Financial
 
-Demo project for a financial services website built with React and Vite.
+Ballast Financial is a demo web app that illustrates how to build a small
+marketing site using **React**, **Vite**, **TypeScript**, and **Tailwind CSS**.
+The goal is to provide a simple starting point for a multi-page site with basic
+navigation, styling, and tests.
 
 [Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/uopcoffee/sb1-vkn8ybmo)
 
-## Usage
+## Getting started
 
-1. `npm install`
-2. `npm run dev` for development
-3. `npm run build` for production
+Install dependencies and start the development server:
 
-Run the linter:
+```bash
+npm install
+npm run dev
+```
+
+### Building and testing
+
+Create a production build and run the test suite:
+
+```bash
+npm run build
+npm test
+```
+
+Lint the code with:
 
 ```bash
 npm run lint
 ```
 
-Run the test suite:
+## Project structure
 
-```bash
-npm test
-```
+- `src/pages` – page components routed by React Router.
+- `src/components` – reusable UI components.
+- `src/utils` – small helper utilities.
+- `public` – static assets served by Vite.
+

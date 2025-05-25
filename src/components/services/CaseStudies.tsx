@@ -21,8 +21,10 @@ const caseStudies: CaseStudy[] = [
     industry: 'SaaS',
     serviceAreas: ['ERP Implementation', 'Fundraising Readiness'],
     companySize: '100–200 employees',
-    challenge: 'Execute dual-track ERP implementation while maintaining audit-ready financials during capital raise.',
-    solution: 'Implemented parallel workstreams for ERP deployment and fundraising preparation.',
+    challenge:
+      'Execute dual-track ERP implementation while maintaining audit-ready financials during capital raise.',
+    solution:
+      'Implemented parallel workstreams for ERP deployment and fundraising preparation. Finance remained close-ready every month.',
     result: 'On-time ERP launch, uninterrupted investor reporting, improved month-end close.',
     icon: <Building2 className="w-8 h-8" />
   },
@@ -32,8 +34,10 @@ const caseStudies: CaseStudy[] = [
     industry: 'Agri-Food',
     serviceAreas: ['Government Compliance', 'Capital Project Management'],
     companySize: '50–100 employees',
-    challenge: 'Manage USDA-funded R&D facility build while ensuring compliance and tax credit capture.',
-    solution: 'Developed comprehensive project management and compliance tracking system.',
+    challenge:
+      'Manage USDA-funded R&D facility build while ensuring compliance and tax credit capture.',
+    solution:
+      'Developed comprehensive project management and compliance tracking system, giving stakeholders real-time visibility.',
     result: 'Timely loan drawdowns, full credit capture, real-time spend visibility.',
     icon: <Leaf className="w-8 h-8" />
   },
@@ -43,8 +47,10 @@ const caseStudies: CaseStudy[] = [
     industry: 'Aerospace',
     serviceAreas: ['P2P Systems', 'Budget Controls'],
     companySize: '100–200 employees',
-    challenge: 'Scale procurement processes while maintaining tight budget control.',
-    solution: 'Implemented 3-way match and BvA-enabled procure-to-pay system.',
+    challenge:
+      'Scale procurement processes while maintaining tight budget control.',
+    solution:
+      'Implemented 3-way match and BvA-enabled procure-to-pay system for full spending oversight.',
     result: 'Streamlined purchasing, tighter budget control, audit-friendly systems.',
     icon: <Rocket className="w-8 h-8" />
   },
@@ -54,8 +60,10 @@ const caseStudies: CaseStudy[] = [
     industry: 'AI/ML',
     serviceAreas: ['M&A Advisory', 'Global Entity Management'],
     companySize: '150–300 employees',
-    challenge: 'Navigate complex acquisition preparation and foreign entity restructuring.',
-    solution: 'Led comprehensive M&A readiness and global entity optimization.',
+    challenge:
+      'Navigate complex acquisition preparation and foreign entity restructuring.',
+    solution:
+      'Led comprehensive M&A readiness and global entity optimization to support expansion plans.',
     result: 'Seamless financial transition, no reporting disruptions, leadership acclaim.',
     icon: <Cpu className="w-8 h-8" />
   },
@@ -66,7 +74,8 @@ const caseStudies: CaseStudy[] = [
     serviceAreas: ['ASC 805', 'Carve-Out Support'],
     companySize: '100–200 employees',
     challenge: 'Complex acquisition accounting and regulatory compliance needs.',
-    solution: 'Executed purchase price allocation and ASC 805 compliance protocols.',
+    solution:
+      'Executed purchase price allocation and ASC 805 compliance protocols with seamless integration into existing processes.',
     result: 'Clean execution with zero audit flags and continuity of operations.',
     icon: <Factory className="w-8 h-8" />
   },
@@ -77,7 +86,8 @@ const caseStudies: CaseStudy[] = [
     serviceAreas: ['Global Startup Setup', 'Tax Coordination'],
     companySize: '11–50 employees',
     challenge: 'Launch global operations with complex international tax requirements.',
-    solution: 'Established comprehensive financial infrastructure and tax framework.',
+    solution:
+      'Established comprehensive financial infrastructure and tax framework enabling cross-border expansion.',
     result: 'Infrastructure in place pre-funding; led to $60M raise from top investors.',
     icon: <Briefcase className="w-8 h-8" />
   },
@@ -88,7 +98,8 @@ const caseStudies: CaseStudy[] = [
     serviceAreas: ['ASC 606 Compliance', 'Interim Finance Leadership'],
     companySize: '11–50 employees',
     challenge: 'Upgrade technical accounting while maintaining operational stability.',
-    solution: 'Implemented ASC 606 compliance framework while managing daily operations.',
+    solution:
+      'Implemented ASC 606 compliance framework while managing daily operations, positioning the company for a smooth audit.',
     result: 'Financial stability, clean audit path, and readiness for capital raise.',
     icon: <Code className="w-8 h-8" />
   },
@@ -99,7 +110,8 @@ const caseStudies: CaseStudy[] = [
     serviceAreas: ['Billing Infrastructure', 'Supply Chain Readiness'],
     companySize: '10–50 employees',
     challenge: 'Scale billing and supply chain systems for major OEM contract.',
-    solution: 'Developed enterprise-grade billing and P2P infrastructure.',
+    solution:
+      'Developed enterprise-grade billing and P2P infrastructure with controls built for enterprise partnerships.',
     result: 'Operational readiness and billing reliability meeting multinational standards.',
     icon: <Leaf className="w-8 h-8" />
   },
@@ -110,7 +122,8 @@ const caseStudies: CaseStudy[] = [
     serviceAreas: ['Litigation Support', 'Crisis Advisory'],
     companySize: '~350 employees',
     challenge: 'Navigate contract litigation while maintaining business operations.',
-    solution: 'Implemented robust documentation protocols and advisory support.',
+    solution:
+      'Implemented robust documentation protocols and advisory support to reduce risk while staying market-facing.',
     result: 'Stabilized operations, retained market presence, managed reputational risk.',
     icon: <Coffee className="w-8 h-8" />
   }
