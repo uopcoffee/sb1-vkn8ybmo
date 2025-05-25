@@ -5,8 +5,9 @@ import Button from '../common/Button';
 const Hero: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-white overflow-hidden">
-      {/* Subtle gradient background */}
+      {/* Subtle gradient background with brand shapes */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-secondary-50 to-accent-50" />
+      <div className="absolute inset-0 bg-[url('/ballast-brand-background.svg')] bg-cover bg-center opacity-40" />
       
       {/* Content */}
       <div className="container-custom relative z-10">
@@ -43,14 +44,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="hidden lg:block relative h-screen"
           >
-            <div className="absolute bottom-0 right-0 w-full h-full flex items-end justify-center">
-              <img
-                src="/hero-image.svg"
-                alt="Financial infrastructure illustration"
-                className="w-auto h-[125%] transform-gpu scale-125 object-bottom object-contain pr-[10px] pb-0"
-                style={{ transformOrigin: 'bottom center' }}
-              />
-            </div>
+            <div className="absolute inset-0 bg-[url('/ballast-brand-background.svg')] bg-cover bg-center" />
           </motion.div>
         </div>
       </div>

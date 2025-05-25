@@ -5,8 +5,7 @@ const TestimonialCarousel: React.FC = () => {
   const testimonial = {
     quote: "Ballast Financial transformed our financial operations. Their expertise and guidance have been invaluable as we've scaled.",
     author: "Sarah Chen",
-    title: "CEO, TechStart Inc.",
-    image: "/testimonial-avatar.svg"
+    title: "CEO, TechStart Inc."
   };
 
   return (
@@ -28,10 +27,9 @@ const TestimonialCarousel: React.FC = () => {
           <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.author}
-                  className="w-full h-full object-cover rounded-full"
+                <div
+                  className="w-full h-full rounded-full bg-[url('/ballast-brand-background.svg')] bg-cover bg-center"
+                  aria-hidden="true"
                 />
               </div>
               <div>
