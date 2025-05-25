@@ -5,6 +5,7 @@ import ContactForm from '../components/contact/ContactForm';
 import CalendlyEmbed from '../components/contact/CalendlyEmbed';
 import ContactInfo from '../components/contact/ContactInfo';
 import Button from '../components/common/Button';
+import HeroSection from '../components/common/HeroSection';
 
 const Contact: React.FC = () => {
   useEffect(() => {
@@ -18,31 +19,10 @@ const Contact: React.FC = () => {
         description="Get in touch with Ballast Financial for expert startup finance guidance. Schedule a consultation or message our team today."
       />
       {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div 
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: 'url(/ballast-brand-background.svg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
-        <div className="container-custom relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto text-center"
-          >
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Let's talk about your financial future
-              </h1>
-            <p className="text-xl text-primary-500/80 mb-8">
-              Schedule a discovery call or reach out through any of our channels. We typically respond within 24 hours.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <HeroSection
+        title="Let's talk about your financial future"
+        subtitle="Schedule a discovery call or reach out through any of our channels. We typically respond within 24 hours."
+      />
 
       <section className="py-20 bg-white">
         <div className="container-custom">
