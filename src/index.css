@@ -64,4 +64,8 @@
   .animation-delay-4000 {
     animation-delay: 4s;
   }
+
+  .geometric-pattern {
+    @apply bg-[url('/ballast-brand-background.svg')] bg-cover bg-center;
+  }
 }
