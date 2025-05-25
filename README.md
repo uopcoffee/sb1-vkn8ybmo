@@ -31,6 +31,11 @@ Lint the code with:
 npm run lint
 ```
 
+### Analytics
+
+Analytics are disabled by default. Set `VITE_ENABLE_ANALYTICS=true` in a `.env`
+file to load the Plausible script.
+
 ## Project structure
 
 - `src/pages` – page components routed by React Router.
