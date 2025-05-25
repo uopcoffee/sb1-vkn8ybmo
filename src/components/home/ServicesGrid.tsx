@@ -13,7 +13,8 @@ const services: Service[] = [
   {
     icon: <BookOpen className="w-12 h-12 text-primary-700 stroke-[2]" />,
     title: "Accounting Operations",
-    description: "Full-cycle accounting and financial reporting",
+    description:
+      "Monthly bookkeeping and GAAP financial reporting. We reconcile accounts, handle accruals and deliver investor-ready statements.",
     details: [
       "Monthly close process",
       "Financial statement preparation",
@@ -24,7 +25,8 @@ const services: Service[] = [
   {
     icon: <Handshake className="w-12 h-12 text-accent-700 stroke-[2]" />,
     title: "Vendor Management",
-    description: "End-to-end vendor relationship oversight",
+    description:
+      "Vendor onboarding, contract management and payment processing. Our controls ensure compliance and optimize spend across your supply chain.",
     details: [
       "Vendor selection and onboarding",
       "Contract negotiation",
@@ -35,7 +37,8 @@ const services: Service[] = [
   {
     icon: <TrendingUp className="w-12 h-12 text-primary-700 stroke-[2]" />,
     title: "FP&A",
-    description: "Strategic financial planning and analysis",
+    description:
+      "Budgeting, forecasting and KPI analysis that puts data behind every decision. Our reporting gives clarity from boardroom to runway.",
     details: [
       "Budgeting and forecasting",
       "KPI tracking and analysis",
@@ -46,7 +49,8 @@ const services: Service[] = [
   {
     icon: <Lightbulb className="w-12 h-12 text-accent-700 stroke-[2]" />,
     title: "Special Projects",
-    description: "Specialized financial initiatives",
+    description:
+      "Support for due diligence, system builds and other projects. We lead integrations and process improvements to keep finance moving forward.",
     details: [
       "Due diligence support",
       "System implementations",

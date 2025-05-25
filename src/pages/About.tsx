@@ -1,66 +1,41 @@
 import React, { useEffect } from 'react';
-import { setMeta } from '../utils/seo';
+import Meta from '../components/Meta';
 import { motion } from 'framer-motion';
 import Section from '../components/common/Section';
 import Button from '../components/common/Button';
+import HeroSection from '../components/common/HeroSection';
 
 const About: React.FC = () => {
   useEffect(() => {
-    setMeta({
-      title: 'About – Ballast Financial | Startup CFO & Accounting',
-      description:
-        'Learn about our mission and team. Ballast Financial provides outsourced CFO services and financial operations for growth-focused startups.',
-    });
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="pt-24">
+      <Meta
+        title="About – Ballast Financial | Startup CFO & Accounting"
+        description="Learn about our mission and team. Ballast Financial provides outsourced CFO services and financial operations for growth-focused startups."
+      />
       {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-700 opacity-95" />
-        <div className="absolute inset-0 bg-[url('/ballast-brand-background.svg')] bg-cover bg-center opacity-10" />
-        <div className="container-custom relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="max-w-xl"
-            >
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Our Mission
-              </h1>
-              <p className="text-xl md:text-2xl text-white/90 mb-6">
-                We're building the financial backbone for the next generation of innovative companies.
-              </p>
-              <p className="text-lg text-white/80 mb-8">
-                Ballast Financial was founded with a clear purpose: to give founders and startup teams the financial clarity and infrastructure they need to focus on what they do best—building great products and growing their business.
-              </p>
-              <Button 
-                variant="secondary" 
-                size="lg" 
-                to="/contact"
-                className="w-fit px-8 py-4"
-              >
-                Schedule a Consultation
-              </Button>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="hidden lg:block"
-            >
-              <img 
-                src="/aboutus-hero.png" 
-                alt="Team collaborating on financial analysis"
-                className="rounded-xl shadow-xl w-full max-w-2xl mx-auto filter brightness-95 contrast-105"
-              />
-            </motion.div>
-          </div>
+      <HeroSection
+        title="Our Mission"
+        subtitle="We're building the financial backbone for the next generation of innovative companies."
+        gradientClass="bg-gradient-to-br from-primary-600 to-primary-700"
+        textWhite
+      >
+        <div className="mb-8 text-white/80">
+          We founded Ballast Financial with a clear purpose: give founders and their teams the financial clarity and infrastructure needed to build great products and grow their business.
         </div>
-      </section>
+        <Button
+          variant="secondary"
+          size="lg"
+          to="/contact"
+          className="w-fit px-8 py-4"
+          onClick={() => console.log('About hero CTA clicked')}
+        >
+          Schedule a consultation
+        </Button>
+      </HeroSection>
 
       {/* Our Story Section */}
       <Section shade>
@@ -83,10 +58,10 @@ const About: React.FC = () => {
             className="space-y-6 text-lg"
           >
             <p className="text-primary-500/80">
-              What began as hatchconsulting, an exploration into helping startups find their footing, 
-              has evolved into Ballast Financial – the steady weight that keeps ventures stable through rough waters. 
-              Our deep understanding of startup challenges, combined with years of financial expertise, 
-              has shaped our approach to providing comprehensive financial infrastructure.
+              What began as hatchconsulting, our early effort to help startups find their footing,
+              has evolved into Ballast Financial – your steady weight through rough waters.
+              Our deep understanding of startup challenges, combined with years of financial expertise,
+              shapes how we deliver comprehensive financial infrastructure.
             </p>
             <p className="text-primary-500/80">
               Through working with countless startups, we've refined our services to address the unique 
@@ -169,8 +144,14 @@ const About: React.FC = () => {
           <p className="text-lg text-primary-500/80 mb-8">
             Let's discuss how we can help your startup build a solid financial foundation.
           </p>
-          <Button variant="primary" size="lg" to="/contact" className="w-fit">
-            Schedule a Consultation
+          <Button
+            variant="primary"
+            size="lg"
+            to="/contact"
+            className="w-fit"
+            onClick={() => console.log('About bottom CTA clicked')}
+          >
+            Schedule a consultation
           </Button>
         </motion.div>
       </Section>
