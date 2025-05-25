@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
       {/* Subtle gradient background with brand shapes */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-secondary-50 to-accent-50" />
       <div className="absolute inset-0 bg-[url('/ballast-brand-background.svg')] bg-cover bg-center opacity-40" />
-      
+
       {/* Content */}
       <div className="container-custom relative z-10">
         <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
