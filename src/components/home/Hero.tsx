@@ -21,6 +21,7 @@ const Hero: React.FC = () => {
           size="lg"
           to="/contact"
           className="w-fit px-8 py-4"
+          aria-label="Schedule a consultation"
           onClick={() => console.log('Hero CTA clicked')}
         >
           Schedule a consultation

@@ -16,6 +16,7 @@ const About: React.FC = () => {
         title="About – Ballast Financial | Startup CFO & Accounting"
         description="Learn about our mission and team. Ballast Financial provides outsourced CFO services and financial operations for growth-focused startups."
       />
+
       {/* Hero Section */}
       <HeroSection
         title="Our Mission"
@@ -23,15 +24,16 @@ const About: React.FC = () => {
         gradientClass="bg-gradient-to-br from-primary-600 to-primary-700"
         textWhite
       >
-        <div className="mb-8 text-white/80">
+        <p className="mb-8 text-white/80">
           We founded Ballast Financial with a clear purpose: give founders and their teams the financial clarity and infrastructure needed to build great products and grow their business.
-        </div>
+        </p>
         <Button
           variant="secondary"
           size="lg"
           to="/contact"
           className="w-fit px-8 py-4"
           onClick={() => console.log('About hero CTA clicked')}
+          aria-label="Schedule a consultation"
         >
           Schedule a consultation
         </Button>
@@ -64,13 +66,13 @@ const About: React.FC = () => {
               shapes how we deliver comprehensive financial infrastructure.
             </p>
             <p className="text-primary-500/80">
-              Through working with countless startups, we've refined our services to address the unique 
-              challenges faced by growing ventures. Today, we're proud to serve as the financial backbone 
+              Through working with countless startups, we've refined our services to address the unique
+              challenges faced by growing ventures. Today, we're proud to serve as the financial backbone
               for innovative companies across various sectors, providing the stability they need to thrive.
             </p>
             <div className="mt-12 text-center">
               <p className="text-xl font-medium italic text-primary-500 mb-8">
-                "Our mission is to anchor growing startups with solid financial operations, 
+                "Our mission is to anchor growing startups with solid financial operations,
                 allowing founders to steer with confidence."
               </p>
             </div>
@@ -138,9 +140,7 @@ const About: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-500 mb-6">
-            Ready to Get Started?
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-500 mb-6">Ready to Get Started?</h2>
           <p className="text-lg text-primary-500/80 mb-8">
             Let's discuss how we can help your startup build a solid financial foundation.
           </p>
@@ -150,6 +150,7 @@ const About: React.FC = () => {
             to="/contact"
             className="w-fit"
             onClick={() => console.log('About bottom CTA clicked')}
+            aria-label="Schedule a consultation"
           >
             Schedule a consultation
           </Button>
