@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useId } from 'react';
 import Button from '../common/Button';
 import Toast from '../common/Toast';
 
@@ -26,6 +26,9 @@ const ContactForm: React.FC = () => {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
+
+  // Generate a base id to ensure uniqueness if multiple forms render
+  const baseId = useId();
 
   const validate = (): FormErrors => {
     const newErrors: FormErrors = {};
@@ -75,9 +78,9 @@ const ContactForm: React.FC = () => {
       <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+          <label htmlFor={`${baseId}-name`} className="block text-sm font-medium mb-2">Name</label>
           <input
-            id="name"
+            id={`${baseId}-name`}
             type="text"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -91,9 +94,9 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+          <label htmlFor={`${baseId}-email`} className="block text-sm font-medium mb-2">Email</label>
           <input
-            id="email"
+            id={`${baseId}-email`}
             type="email"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -107,9 +110,9 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="company" className="block text-sm font-medium mb-2">Company</label>
+          <label htmlFor={`${baseId}-company`} className="block text-sm font-medium mb-2">Company</label>
           <input
-            id="company"
+            id={`${baseId}-company`}
             type="text"
             value={formData.company}
             onChange={(e) => setFormData({ ...formData, company: e.target.value })}
@@ -123,9 +126,9 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+          <label htmlFor={`${baseId}-message`} className="block text-sm font-medium mb-2">Message</label>
           <textarea
-            id="message"
+            id={`${baseId}-message`}
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             className="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-primary-500"
