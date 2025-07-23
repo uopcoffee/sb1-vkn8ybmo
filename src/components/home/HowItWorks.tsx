@@ -68,7 +68,7 @@ const HowItWorks: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
             {steps.map((step, index) => (
               <motion.div 
-                key={index}
+                key={step.title}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:bg-white/20 transition-colors duration-300"
                 variants={stepVariants}
               >

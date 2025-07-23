@@ -113,7 +113,7 @@ const About: React.FC = () => {
               }
             ].map((value, index) => (
               <motion.div
-                key={index}
+                key={value.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
