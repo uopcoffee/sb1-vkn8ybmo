@@ -42,19 +42,44 @@ const Header: React.FC = () => {
         </Link>
 
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/" className={`text-primary-700 hover:text-accent-900 transition-colors ${isActive('/') ? 'font-semibold' : ''}`} aria-current={isActive('/') ? 'page' : undefined}>
+          <Link
+            to="/"
+            className={`text-primary-700 hover:text-accent-900 transition-colors ${isActive('/') ? 'font-semibold' : ''}`}
+            aria-current={isActive('/') ? 'page' : undefined}
+            onMouseEnter={() => import('../../pages/Home')}
+          >
             Home
           </Link>
-          <Link to="/about" className={`text-primary-700 hover:text-accent-900 transition-colors ${isActive('/about') ? 'font-semibold' : ''}`} aria-current={isActive('/about') ? 'page' : undefined}>
+          <Link
+            to="/about"
+            className={`text-primary-700 hover:text-accent-900 transition-colors ${isActive('/about') ? 'font-semibold' : ''}`}
+            aria-current={isActive('/about') ? 'page' : undefined}
+            onMouseEnter={() => import('../../pages/About')}
+          >
             About
           </Link>
-          <Link to="/services" className={`text-primary-700 hover:text-accent-900 transition-colors ${isActive('/services') ? 'font-semibold' : ''}`} aria-current={isActive('/services') ? 'page' : undefined}>
+          <Link
+            to="/services"
+            className={`text-primary-700 hover:text-accent-900 transition-colors ${isActive('/services') ? 'font-semibold' : ''}`}
+            aria-current={isActive('/services') ? 'page' : undefined}
+            onMouseEnter={() => import('../../pages/Services')}
+          >
             Services
           </Link>
-          <Link to="/faq" className={`text-primary-700 hover:text-accent-500 transition-colors ${isActive('/faq') ? 'font-semibold' : ''}`} aria-current={isActive('/faq') ? 'page' : undefined}>
+          <Link
+            to="/faq"
+            className={`text-primary-700 hover:text-accent-500 transition-colors ${isActive('/faq') ? 'font-semibold' : ''}`}
+            aria-current={isActive('/faq') ? 'page' : undefined}
+            onMouseEnter={() => import('../../pages/FAQ')}
+          >
             FAQ
           </Link>
-          <Link to="/blog" className={`text-primary-700 hover:text-accent-500 transition-colors ${isActive('/blog') ? 'font-semibold' : ''}`} aria-current={isActive('/blog') ? 'page' : undefined}>
+          <Link
+            to="/blog"
+            className={`text-primary-700 hover:text-accent-500 transition-colors ${isActive('/blog') ? 'font-semibold' : ''}`}
+            aria-current={isActive('/blog') ? 'page' : undefined}
+            onMouseEnter={() => import('../../pages/blog/BlogList')}
+          >
             Blog
           </Link>
           <Link

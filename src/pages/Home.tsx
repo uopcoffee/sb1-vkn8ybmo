@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import Meta from '../components/Meta';
 import Hero from '../components/home/Hero';
-import HowItWorks from '../components/home/HowItWorks';
-import WhyChoose from '../components/home/WhyChoose';
-import Testimonial from '../components/home/Testimonial';
-import BottomCTA from '../components/home/BottomCTA';
+import ReactLazy = React.lazy;
+const HowItWorks = React.lazy(() => import('../components/home/HowItWorks'));
+const WhyChoose = React.lazy(() => import('../components/home/WhyChoose'));
+const Testimonial = React.lazy(() => import('../components/home/Testimonial'));
+const BottomCTA = React.lazy(() => import('../components/home/BottomCTA'));
 
 const Home: React.FC = () => {
   useEffect(() => {
@@ -55,10 +56,12 @@ const Home: React.FC = () => {
         ]}
       />
       <Hero />
-      <HowItWorks />
-      <WhyChoose />
-      <Testimonial />
-      <BottomCTA />
+      <React.Suspense fallback={<div className="text-center py-12">Loading…</div>}>
+        <HowItWorks />
+        <WhyChoose />
+        <Testimonial />
+        <BottomCTA />
+      </React.Suspense>
     </>
   );
 };
