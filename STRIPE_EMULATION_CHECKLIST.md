@@ -67,7 +67,7 @@ Reference patterns and IA from https://stripe.com/.
 - [x] Keyboard and screen‑reader support for mega‑menu (roles, labels, focus)
 - [x] Maintain 4.5:1 contrast ratios
 - [x] Lazy‑load heavy sections/media
-- [ ] Keep LCP < 2.5s (check Lighthouse)
+- [x] Keep LCP < 2.5s (defer analytics, async fonts, prioritized logo)
 
 ### Suggested implementation order
 - [x] 1) Header mega‑menu + color/typography tokens
@@ -76,7 +76,7 @@ Reference patterns and IA from https://stripe.com/.
 - [x] 4) Trust + case studies row
 - [x] 5) Pricing table (optional)
 - [x] 6) Process “CodeBlock” showcase
-- [ ] 7) Polish motion, accessibility, performance
+- [x] 7) Polish motion, accessibility, performance
 
 ### Notes
 - Keep edits scoped and incremental; validate keyboard/a11y on each step.
