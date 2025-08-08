@@ -5,6 +5,7 @@ import { ArrowRightCircle } from 'lucide-react';
 const ClipboardCheck = lazy(() => import('lucide-react').then(m => ({ default: m.ClipboardCheck })));
 const BarChart3 = lazy(() => import('lucide-react').then(m => ({ default: m.BarChart3 })));
 import Button from '../common/Button';
+import CodeBlock from '../common/CodeBlock';
 const TeamImg = {
   src: '/team-dynamics.svg',
   width: 1200,
@@ -70,6 +71,15 @@ const HowItWorks: React.FC = () => {
       transition: { duration: 0.5 }
     }
   };
+
+  const closeChecklist = `{
+  "monthEndClose": [
+    { "task": "Reconcile bank accounts", "owner": "AP", "status": "pending" },
+    { "task": "Revenue recognition (ASC 606)", "owner": "GL", "status": "pending" },
+    { "task": "Accruals & deferrals", "owner": "GL", "status": "pending" },
+    { "task": "Management reporting", "owner": "FP&A", "status": "pending" }
+  ]
+}`;
 
   return (
     <section className="py-20 bg-gradient-to-br from-primary-500 to-primary-600">
@@ -184,6 +194,10 @@ const HowItWorks: React.FC = () => {
               </Button>
             </div>
           </motion.div>
+        </div>
+
+        <div className="mt-16">
+          <CodeBlock title="Monthly Close Checklist" language="json" code={closeChecklist} />
         </div>
       </div>
     </section>

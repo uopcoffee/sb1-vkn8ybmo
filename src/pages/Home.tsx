@@ -8,6 +8,7 @@ const Testimonial = React.lazy(() => import('../components/home/Testimonial'));
 const BottomCTA = React.lazy(() => import('../components/home/BottomCTA'));
 const BentoGrid = React.lazy(() => import('../components/common/BentoGrid'));
 const TrustSection = React.lazy(() => import('../components/home/TrustSection'));
+const PricingTable = React.lazy(() => import('../components/common/PricingTable'));
 
 const Home: React.FC = () => {
   useEffect(() => {
@@ -69,6 +70,7 @@ const Home: React.FC = () => {
         <HowItWorks />
         <WhyChoose />
         <Testimonial />
+        <PricingTable />
         <BottomCTA />
       </React.Suspense>
     </>

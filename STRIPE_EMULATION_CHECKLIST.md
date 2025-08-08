@@ -11,32 +11,32 @@ Reference patterns and IA from https://stripe.com/.
   - [x] ARIA roles and focus management
 
 ### Hero pattern
-- [ ] **Benefits‑first headline** in `src/components/home/Hero.tsx`
-  - [ ] Dual CTAs: “Start now” and “Contact sales”
-  - [ ] Add slim stat bar: e.g., “Board‑ready financials monthly • 70% less admin • Audit‑friendly systems”
+- [x] **Benefits‑first headline** in `src/components/home/Hero.tsx`
+  - [x] Dual CTAs: “Start now” and “Contact sales”
+  - [x] Add slim stat bar: e.g., “Board‑ready financials monthly • 70% less admin • Audit‑friendly systems”
   - [ ] Trust bar with logos or key metrics
 
 ### Modular product suite
-- [ ] **Bento grid** in `src/components/home/ServicesGrid.tsx`
-  - [ ] Cards: Recurring Ops, Advisory, Transformation
-  - [ ] Icons, short copy, “Learn more” links
-  - [ ] Subtle gradients, elevation, motion on hover/scroll
+- [x] **Bento grid** in `src/components/home/ServicesGrid.tsx`
+  - [x] Cards: Recurring Ops, Advisory, Transformation
+  - [x] Icons, short copy, “Learn more” links
+  - [x] Subtle gradients, elevation, motion on hover/scroll
 
 ### Proof and customer stories
-- [ ] **Case studies row** on `src/pages/Services.tsx` using `src/components/services/CaseStudies.tsx`
+- [x] **Case studies row** on `src/pages/Services.tsx` using `src/components/services/CaseStudies.tsx`
 - [ ] **Trust section** in `src/components/home/TrustSection.tsx`
   - [ ] Real logos (replace placeholders)
   - [ ] Compact carousel (accessible)
 
 ### Pricing (Stripe‑style transparency)
-- [ ] Create `src/components/common/PricingTable.tsx`
-  - [ ] Packages or “from $/mo + hourly”
-  - [ ] Feature bullets and “Talk to sales” path
-  - [ ] Surface on Home (`src/pages/Home.tsx`) and Services (`src/pages/Services.tsx`)
+- [x] Create `src/components/common/PricingTable.tsx`
+  - [x] Packages or “from $/mo + hourly”
+  - [x] Feature bullets and “Talk to sales” path
+  - [x] Surface on Home (`src/pages/Home.tsx`) and Services (`src/pages/Services.tsx`)
 
 ### “For developers” analogue
-- [ ] Create `src/components/common/CodeBlock.tsx` (syntax‑highlighted UI)
-  - [ ] Use inside `src/components/home/HowItWorks.tsx` to show process snippets (e.g., close checklist JSON, sample KPI table)
+- [x] Create `src/components/common/CodeBlock.tsx` (syntax‑highlighted UI)
+  - [x] Use inside `src/components/home/HowItWorks.tsx` to show process snippets (e.g., close checklist JSON, sample KPI table)
 
 ### Motion and visuals
 - [ ] Adopt Stripe‑like gradients and depth across sections
@@ -54,10 +54,10 @@ Reference patterns and IA from https://stripe.com/.
 
 ### Components to add (common)
 - [x] `src/components/common/MegaMenu.tsx`
-- [ ] `src/components/common/BentoGrid.tsx`
-- [ ] `src/components/common/StatBar.tsx`
-- [ ] `src/components/common/PricingTable.tsx`
-- [ ] `src/components/common/CodeBlock.tsx`
+- [x] `src/components/common/BentoGrid.tsx`
+- [x] `src/components/common/StatBar.tsx`
+- [x] `src/components/common/PricingTable.tsx`
+- [x] `src/components/common/CodeBlock.tsx`
 
 ### Content cadence and CTAs
 - [ ] Mirror Stripe cadence: hero CTA → mid‑page CTA → bottom CTA
@@ -71,11 +71,11 @@ Reference patterns and IA from https://stripe.com/.
 
 ### Suggested implementation order
 - [x] 1) Header mega‑menu + color/typography tokens
-- [ ] 2) Hero refresh + StatBar
-- [ ] 3) Services bento grid
+- [x] 2) Hero refresh + StatBar
+- [x] 3) Services bento grid
 - [ ] 4) Trust + case studies row
-- [ ] 5) Pricing table (optional)
-- [ ] 6) Process “CodeBlock” showcase
+- [x] 5) Pricing table (optional)
+- [x] 6) Process “CodeBlock” showcase
 - [ ] 7) Polish motion, accessibility, performance
 
 ### Notes
