@@ -67,7 +67,7 @@ const TrustSection: React.FC = () => {
           {clients.map((client, index) => (
             <motion.div 
               key={index} 
-              className="flex flex-col items-center justify-center w-32 h-24 bg-background rounded-lg p-4 hover:bg-primary-50 transition-colors duration-300"
+              className="flex flex-col items-center justify-center w-32 h-24 bg-white rounded-lg p-4 hover:bg-primary-50 transition-colors duration-300"
               variants={childVariants}
             >
               {client.logo}

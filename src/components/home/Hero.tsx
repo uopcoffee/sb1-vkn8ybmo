@@ -1,34 +1,21 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import Button from '../common/Button';
-import HeroSection from '../common/HeroSection';
 
-const Hero: React.FC = () => {
-  return (
-    <HeroSection
-      title="Finance Infrastructure for Venture‑Backed Startups"
-      subtitle="We serve as your startup’s outsourced finance team—handling accounting, payroll and CFO strategy—so you can focus on growth."
-      gradientClass="bg-gradient-to-br from-white via-secondary-50 to-accent-50"
+const Hero: React.FC = () => (
+  <section className="relative flex flex-col items-center justify-center min-h-[70vh] bg-gradient-to-br from-blue-50 via-white to-gray-100 text-center px-4">
+    <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-gray-900 tracking-tight drop-shadow-sm">
+      Ballast Financial
+    </h1>
+    <p className="text-lg md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto">
+      Outsourced CFO, accounting, and finance operations for venture-backed startups. <br className="hidden md:inline" /> Scale with confidence.
+    </p>
+    <a
+      href="/contact"
+      className="inline-block px-10 py-4 bg-blue-600 text-white rounded-full font-semibold shadow-lg hover:bg-blue-700 transition-all duration-200 text-lg"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="flex justify-center"
-      >
-        <Button
-          variant="primary"
-          size="lg"
-          to="/contact"
-          className="w-fit px-8 py-4"
-          aria-label="Schedule a consultation"
-          onClick={() => console.log('Hero CTA clicked')}
-        >
-          Schedule a consultation
-        </Button>
-      </motion.div>
-    </HeroSection>
-  );
-};
+      Contact Us
+    </a>
+    {/* Optional: Add a subtle animated SVG or gradient blob here for extra polish */}
+  </section>
+);
 
 export default Hero;

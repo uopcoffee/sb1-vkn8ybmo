@@ -101,10 +101,20 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 pt-8 text-center">
-          <p className="text-sm text-gray-200">
-            &copy; {currentYear} Ballast Financial. All rights reserved.
-          </p>
+        <div className="border-t border-gray-700 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-sm text-gray-200">
+              &copy; {currentYear} Ballast Financial. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/eula" className="text-sm text-gray-200 hover:text-white transition-colors">
+                EULA
+              </Link>
+              <Link to="/privacy-policy" className="text-sm text-gray-200 hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
