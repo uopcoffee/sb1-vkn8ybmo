@@ -1,5 +1,6 @@
 import React from 'react';
 import StatBar from '../common/StatBar';
+import HeroTrustBar from '../common/HeroTrustBar';
 
 const Hero: React.FC = () => (
   <section className="relative text-center">
@@ -26,6 +27,7 @@ const Hero: React.FC = () => (
       </div>
     </div>
     <StatBar />
+    <HeroTrustBar />
   </section>
 );
 

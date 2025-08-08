@@ -1,6 +1,7 @@
 import React from 'react';
 import { BookOpen, Handshake, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 interface BentoCardProps {
   icon: React.ReactNode;
@@ -10,9 +11,17 @@ interface BentoCardProps {
   accentClass: string;
 }
 
+const MotionDiv = motion.div;
+
 const BentoCard: React.FC<BentoCardProps> = ({ icon, title, description, to, accentClass }) => (
   <Link to={to} className="group block">
-    <div className={`card-interactive p-6 md:p-8 h-full relative overflow-hidden`}> 
+    <MotionDiv
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.4 }}
+      className={`card-interactive p-6 md:p-8 h-full relative overflow-hidden`}
+    >
       <div className={`absolute -right-10 -top-10 w-40 h-40 rounded-full ${accentClass} opacity-10 group-hover:opacity-20 transition-opacity`} />
       <div className="flex items-start gap-4">
         <div className="flex-shrink-0">{icon}</div>
@@ -22,7 +31,7 @@ const BentoCard: React.FC<BentoCardProps> = ({ icon, title, description, to, acc
           <span className="mt-4 inline-flex items-center text-accent-700 font-medium">Learn more →</span>
         </div>
       </div>
-    </div>
+    </MotionDiv>
   </Link>
 );
 

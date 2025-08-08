@@ -14,7 +14,7 @@ Reference patterns and IA from https://stripe.com/.
 - [x] **Benefits‑first headline** in `src/components/home/Hero.tsx`
   - [x] Dual CTAs: “Start now” and “Contact sales”
   - [x] Add slim stat bar: e.g., “Board‑ready financials monthly • 70% less admin • Audit‑friendly systems”
-  - [ ] Trust bar with logos or key metrics
+  - [x] Trust bar with logos or key metrics
 
 ### Modular product suite
 - [x] **Bento grid** in `src/components/home/ServicesGrid.tsx`
