@@ -89,7 +89,7 @@ const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, i
 
 const ServicesGrid: React.FC = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-primary-50">
+    <section className="py-20 bg-gray-50">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-700 mb-6">
@@ -99,8 +99,8 @@ const ServicesGrid: React.FC = () => {
             We deliver end-to-end finance capability across three complementary lanes:
           </p>
         </div>
-        {/* Bento-like responsive grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} index={index} />
           ))}
