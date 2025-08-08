@@ -31,20 +31,65 @@ const setOrCreateLink = (rel: string, href: string) => {
   return link;
 };
 
+/**
+ * Builds an absolute URL for meta tags. When running in staging, we want to
+ * ensure canonical URLs point to the production host to avoid duplicate content
+ * and accidental indexing. The production host can be overridden via
+ * VITE_CANONICAL_HOST.
+ */
 const asAbsoluteUrl = (pathOrUrl?: string) => {
   if (!pathOrUrl) return undefined;
+
+  // Respect absolute URLs as-is
   try {
-    // If already absolute
     const u = new URL(pathOrUrl);
     return u.toString();
   } catch {
-    const base = `${window.location.protocol}//${window.location.host}`;
-    return `${base}${pathOrUrl.startsWith('/') ? pathOrUrl : `/${pathOrUrl}`}`;
+    // Continue to build from a base
   }
+
+  const envCanonicalHost = (import.meta as any).env?.VITE_CANONICAL_HOST as string | undefined;
+  const viteEnv = (import.meta as any).env?.VITE_ENV as string | undefined;
+
+  const currentHostname = window.location.hostname;
+  const canonicalHostname = (() => {
+    if (!envCanonicalHost) return undefined;
+    try {
+      // Allow values like "ballastfinancial.com" or full URLs
+      const url = envCanonicalHost.includes('://') ? envCanonicalHost : `https://${envCanonicalHost}`;
+      return new URL(url).hostname;
+    } catch {
+      return undefined;
+    }
+  })();
+
+  const isPreviewLike = viteEnv === 'preview' || (!!canonicalHostname && currentHostname !== canonicalHostname);
+
+      // When preview-like, force canonical base to the production host if provided
+    const base = isPreviewLike && canonicalHostname
+    ? `https://${canonicalHostname}`
+    : `${window.location.protocol}//${window.location.host}`;
+
+  const normalizedPath = pathOrUrl.startsWith('/') ? pathOrUrl : `/${pathOrUrl}`;
+  return `${base}${normalizedPath}`;
 };
 
 const Meta: React.FC<MetaProps> = ({ title, description, image, canonicalPath, noindex, structuredData, ogType }) => {
   useEffect(() => {
+    const viteEnv = (import.meta as any).env?.VITE_ENV as string | undefined;
+    const envCanonicalHost = (import.meta as any).env?.VITE_CANONICAL_HOST as string | undefined;
+    const currentHostname = window.location.hostname;
+    const canonicalHostname = (() => {
+      if (!envCanonicalHost) return undefined;
+      try {
+        const url = envCanonicalHost.includes('://') ? envCanonicalHost : `https://${envCanonicalHost}`;
+        return new URL(url).hostname;
+      } catch {
+        return undefined;
+      }
+    })();
+    const isPreviewLike = viteEnv === 'preview' || (!!canonicalHostname && currentHostname !== canonicalHostname);
+
     const absImage = asAbsoluteUrl(image ?? '/ballast-brand-background.svg');
     const canonicalUrl = asAbsoluteUrl(canonicalPath ?? window.location.pathname);
 
@@ -95,7 +140,7 @@ const Meta: React.FC<MetaProps> = ({ title, description, image, canonicalPath, n
     }
 
     // Robots (noindex)
-    if (noindex) {
+    if (noindex || isPreviewLike) {
       const robots = ensureMetaTag('meta[name="robots"]', { name: 'robots' });
       robots.setAttribute('content', 'noindex, nofollow');
     }

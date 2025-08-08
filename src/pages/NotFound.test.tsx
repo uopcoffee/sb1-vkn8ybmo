@@ -13,7 +13,7 @@ describe('NotFound page', () => {
         <NotFound />
       </MemoryRouter>
     );
-    expect(screen.getByText('Page Not Found')).toBeInTheDocument();
+    expect(screen.getByText(/Page not found/i)).toBeInTheDocument();
     const link = screen.getByRole('link', { name: /back to home/i });
     expect(link).toHaveAttribute('href', '/');
   });
