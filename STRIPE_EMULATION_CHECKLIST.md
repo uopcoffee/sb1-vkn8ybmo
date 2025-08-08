@@ -24,9 +24,9 @@ Reference patterns and IA from https://stripe.com/.
 
 ### Proof and customer stories
 - [x] **Case studies row** on `src/pages/Services.tsx` using `src/components/services/CaseStudies.tsx`
-- [ ] **Trust section** in `src/components/home/TrustSection.tsx`
+- [x] **Trust section** in `src/components/home/TrustSection.tsx`
   - [ ] Real logos (replace placeholders)
-  - [ ] Compact carousel (accessible)
+  - [x] Compact carousel (accessible)
 
 ### Pricing (Stripe‑style transparency)
 - [x] Create `src/components/common/PricingTable.tsx`
@@ -39,8 +39,8 @@ Reference patterns and IA from https://stripe.com/.
   - [x] Use inside `src/components/home/HowItWorks.tsx` to show process snippets (e.g., close checklist JSON, sample KPI table)
 
 ### Motion and visuals
-- [ ] Adopt Stripe‑like gradients and depth across sections
-- [ ] Respect `prefers-reduced-motion`
+- [x] Adopt Stripe‑like gradients and depth across sections
+- [x] Respect `prefers-reduced-motion`
 - [ ] Add staggered entrances and gentle hover lifts (Framer Motion)
 
 ### Design system adjustments
@@ -60,8 +60,8 @@ Reference patterns and IA from https://stripe.com/.
 - [x] `src/components/common/CodeBlock.tsx`
 
 ### Content cadence and CTAs
-- [ ] Mirror Stripe cadence: hero CTA → mid‑page CTA → bottom CTA
-- [ ] Reuse `src/components/services/ServicesCTA.tsx` on Home and Services pages
+- [x] Mirror Stripe cadence: hero CTA → mid‑page CTA → bottom CTA
+- [x] Reuse `src/components/services/ServicesCTA.tsx` on Home and Services pages
 
 ### Performance and accessibility
 - [x] Keyboard and screen‑reader support for mega‑menu (roles, labels, focus)
@@ -73,7 +73,7 @@ Reference patterns and IA from https://stripe.com/.
 - [x] 1) Header mega‑menu + color/typography tokens
 - [x] 2) Hero refresh + StatBar
 - [x] 3) Services bento grid
-- [ ] 4) Trust + case studies row
+- [x] 4) Trust + case studies row
 - [x] 5) Pricing table (optional)
 - [x] 6) Process “CodeBlock” showcase
 - [ ] 7) Polish motion, accessibility, performance

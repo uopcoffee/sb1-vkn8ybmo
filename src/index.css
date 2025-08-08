@@ -87,6 +87,7 @@
   h1, h2, h3, h4, h5, h6 {
     @apply text-primary-500 font-bold;
     font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.01em;
   }
 
   p {
@@ -163,7 +164,7 @@
 
   .rotating-background::before {
     content: '';
-    @apply absolute inset-0 animate-background-shift opacity-10 -z-10;
+    @apply absolute inset-0 animate-background-shift opacity-10 -z-10 motion-reduce:animate-none;
   }
 
   /* Card system */
@@ -176,7 +177,7 @@
   }
 
   .card-interactive {
-    @apply bg-white rounded-xl border border-neutral-200 shadow-soft hover:shadow-medium transition-all duration-200 hover:-translate-y-1 hover:border-accent-300;
+    @apply bg-white rounded-xl border border-neutral-200 shadow-soft hover:shadow-medium transition-all duration-200 hover:-translate-y-1 hover:border-accent-300 motion-reduce:transition-none motion-reduce:hover:translate-y-0;
   }
 
   /* Section system */
@@ -249,5 +250,14 @@
   /* Text balance */
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Reduce Motion */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in,
+    .animate-fade-in-up,
+    .animate-scale-in {
+      animation: none !important;
+    }
   }
 }

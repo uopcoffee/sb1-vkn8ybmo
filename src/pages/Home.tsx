@@ -9,6 +9,7 @@ const BottomCTA = React.lazy(() => import('../components/home/BottomCTA'));
 const BentoGrid = React.lazy(() => import('../components/common/BentoGrid'));
 const TrustSection = React.lazy(() => import('../components/home/TrustSection'));
 const PricingTable = React.lazy(() => import('../components/common/PricingTable'));
+const ServicesCTA = React.lazy(() => import('../components/services/ServicesCTA'));
 
 const Home: React.FC = () => {
   useEffect(() => {
@@ -66,6 +67,7 @@ const Home: React.FC = () => {
       <link rel="prefetch" href="/contact" />
       <React.Suspense fallback={<div className="text-center py-12">Loading…</div>}>
         <BentoGrid />
+        <ServicesCTA />
         <TrustSection />
         <HowItWorks />
         <WhyChoose />
