@@ -4,6 +4,8 @@ import Hero from '../components/home/Hero';
 import ReactLazy = React.lazy;
 const HowItWorks = React.lazy(() => import('../components/home/HowItWorks'));
 const WhyChoose = React.lazy(() => import('../components/home/WhyChoose'));
+const ServiceBenefits = React.lazy(() => import('../components/home/ServiceBenefits'));
+const TrustSection = React.lazy(() => import('../components/home/TrustSection'));
 const Testimonial = React.lazy(() => import('../components/home/Testimonial'));
 const BottomCTA = React.lazy(() => import('../components/home/BottomCTA'));
 
@@ -63,7 +65,9 @@ const Home: React.FC = () => {
       <link rel="prefetch" href="/contact" />
       <React.Suspense fallback={<div className="text-center py-12">Loading…</div>}>
         <HowItWorks />
+        <ServiceBenefits />
         <WhyChoose />
+        <TrustSection />
         <Testimonial />
         <BottomCTA />
       </React.Suspense>
