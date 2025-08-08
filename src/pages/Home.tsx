@@ -16,6 +16,43 @@ const Home: React.FC = () => {
       <Meta
         title="Ballast Financial – Startup CFO & Accounting Services"
         description="Outsourced CFO, accounting, and finance operations for venture-backed startups. Ballast Financial streamlines your financial processes and provides steady guidance so you can scale with confidence."
+        canonicalPath="/"
+        structuredData={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Ballast Financial',
+            url: 'https://ballastfinancial.com',
+            logo: 'https://ballastfinancial.com/ballast_logo.svg',
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+1-415-508-6113',
+              contactType: 'customer service',
+              email: 'contact@ballastfinancial.com',
+              areaServed: 'US',
+              availableLanguage: ['English']
+            },
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: '490 Post St STE 500 Unit 2035',
+              addressLocality: 'San Francisco',
+              addressRegion: 'CA',
+              postalCode: '94102',
+              addressCountry: 'US'
+            }
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'Ballast Financial',
+            url: 'https://ballastfinancial.com',
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: 'https://ballastfinancial.com/?q={search_term_string}',
+              'query-input': 'required name=search_term_string'
+            }
+          }
+        ]}
       />
       <Hero />
       <HowItWorks />

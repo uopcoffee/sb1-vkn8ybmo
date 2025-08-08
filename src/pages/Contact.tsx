@@ -17,6 +17,35 @@ const Contact: React.FC = () => {
       <Meta
         title="Contact – Ballast Financial | Startup CFO & Accounting"
         description="Get in touch with Ballast Financial for expert startup finance guidance. Schedule a consultation or message our team today."
+        canonicalPath="/contact"
+        structuredData={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ContactPage',
+            name: 'Contact Ballast Financial',
+            url: 'https://ballastfinancial.com/contact'
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Ballast Financial',
+            url: 'https://ballastfinancial.com',
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+1-415-508-6113',
+              contactType: 'customer service',
+              email: 'contact@ballastfinancial.com'
+            },
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: '490 Post St STE 500 Unit 2035',
+              addressLocality: 'San Francisco',
+              addressRegion: 'CA',
+              postalCode: '94102',
+              addressCountry: 'US'
+            }
+          }
+        ]}
       />
       {/* Hero Section */}
       <HeroSection

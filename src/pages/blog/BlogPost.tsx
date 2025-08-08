@@ -12,7 +12,23 @@ const BlogPost: React.FC = () => {
 
   return (
     <div className="pt-24">
-      <Meta title={`${slug ?? ''} – Ballast Blog`} />
+      <Meta
+        title={`${slug ?? ''} – Ballast Blog`}
+        canonicalPath={`/blog/${slug ?? ''}`}
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: slug ?? '',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `https://ballastfinancial.com/blog/${slug ?? ''}`
+          },
+          author: {
+            '@type': 'Organization',
+            name: 'Ballast Financial'
+          }
+        }}
+      />
       <HeroSection title={slug ?? ''} />
       <section className="py-20">
         <div className="container-custom">

@@ -15,6 +15,13 @@ const About: React.FC = () => {
       <Meta
         title="About – Ballast Financial | Startup CFO & Accounting"
         description="Learn about our mission and team. Ballast Financial provides outsourced CFO services and financial operations for growth-focused startups."
+        canonicalPath="/about"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'AboutPage',
+          name: 'About Ballast Financial',
+          url: 'https://ballastfinancial.com/about'
+        }}
       />
 
       {/* Hero Section */}

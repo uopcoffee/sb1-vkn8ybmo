@@ -17,6 +17,18 @@ const Services: React.FC = () => {
       <Meta
         title="Services – Ballast Financial | Startup Finance & Accounting"
         description="Explore our outsourced CFO, accounting, and finance services built for venture-backed startups. Let Ballast streamline your books and reporting."
+        canonicalPath="/services"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: 'Services',
+          url: 'https://ballastfinancial.com/services',
+          about: {
+            '@type': 'Service',
+            name: 'Startup CFO and Accounting Services',
+            description: 'Outsourced CFO, accounting operations, FP&A, and finance transformation for venture-backed startups.'
+          }
+        }}
       />
       {/* Hero Section */}
       <HeroSection

@@ -24,6 +24,19 @@ const FAQ: React.FC = () => {
       <Meta
         title="FAQ – Ballast Financial"
         description="Frequently asked questions about Ballast Financial services."
+        canonicalPath="/faq"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map(({ q, a }) => ({
+            '@type': 'Question',
+            name: q,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: a
+            }
+          }))
+        }}
       />
       <HeroSection title="Frequently Asked Questions" />
       <section className="py-20">

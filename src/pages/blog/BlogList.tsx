@@ -15,7 +15,12 @@ const BlogList: React.FC = () => {
 
   return (
     <div className="pt-24">
-      <Meta title="Blog – Ballast Financial" />
+      <Meta title="Blog – Ballast Financial" canonicalPath="/blog" structuredData={{
+        '@context': 'https://schema.org',
+        '@type': 'Blog',
+        name: 'Ballast Financial Blog',
+        url: 'https://ballastfinancial.com/blog'
+      }} />
       <HeroSection title="Blog" />
       <section className="py-20">
         <div className="container-custom">
