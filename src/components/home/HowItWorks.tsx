@@ -1,9 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import React, { lazy, Suspense } from 'react';
-import { ArrowRightCircle } from 'lucide-react';
-const ClipboardCheck = lazy(() => import('lucide-react').then(m => ({ default: m.ClipboardCheck })));
-const BarChart3 = lazy(() => import('lucide-react').then(m => ({ default: m.BarChart3 })));
+import { motion } from 'framer-motion';
+import { ArrowRightCircle, ClipboardCheck, BarChart3 } from 'lucide-react';
 import Button from '../common/Button';
 import CodeBlock from '../common/CodeBlock';
 const TeamImg = {
@@ -20,11 +17,7 @@ const FinancialImg = {
 const HowItWorks: React.FC = () => {
   const steps = [
     {
-      icon: (
-        <Suspense fallback={<div className="w-12 h-12 bg-white/10 rounded-full" />}> 
-          <ClipboardCheck className="w-12 h-12 text-accent-900" />
-        </Suspense>
-      ),
+      icon: <ClipboardCheck className="w-12 h-12 text-accent-900" />,
       title: 'Flexible scope',
       description: 'hourly or project based—no long-term lock-in',
     },
@@ -34,20 +27,12 @@ const HowItWorks: React.FC = () => {
       description: 'U.S. leadership plus a vetted offshore team for 24-hour momentum and predictable cost',
     },
     {
-      icon: (
-        <Suspense fallback={<div className="w-12 h-12 bg-white/10 rounded-full" />}> 
-          <BarChart3 className="w-12 h-12 text-accent-900" />
-        </Suspense>
-      ),
+      icon: <BarChart3 className="w-12 h-12 text-accent-900" />,
       title: 'Integrated stack',
       description: 'best-in-class tools stitched together for efficiency, insight, and audit-ready data',
     },
     {
-      icon: (
-        <Suspense fallback={<div className="w-12 h-12 bg-white/10 rounded-full" />}> 
-          <ClipboardCheck className="w-12 h-12 text-accent-900" />
-        </Suspense>
-      ),
+      icon: <ClipboardCheck className="w-12 h-12 text-accent-900" />,
       title: 'Partner mindset',
       description: 'tight coordination with auditors, tax, and legal so nothing falls through the cracks',
     },

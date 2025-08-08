@@ -25,10 +25,10 @@ const TrustSection: React.FC = () => {
         {/* Accessible compact carousel */}
         <div className="relative overflow-hidden" aria-roledescription="carousel">
           <div
-            className="flex gap-12 items-center animate-[scroll_30s_linear_infinite] motion-reduce:animate-none"
+            className="flex gap-12 items-center animate-[scroll_45s_linear_infinite] motion-reduce:animate-none"
             aria-live="off"
           >
-            {[...clientLogos, ...clientLogos].map((logo, idx) => (
+            {[...clientLogos, ...clientLogos.slice(0, 2)].map((logo, idx) => (
               <div key={idx} className="shrink-0 w-40 h-16 flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity" role="group" aria-label={logo.name}>
                 <img
                   src={logo.src}
@@ -46,7 +46,10 @@ const TrustSection: React.FC = () => {
           {`
           @keyframes scroll {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            100% { transform: translateX(-60%); }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .motion-reduce\\:animate-none { animation: none !important; }
           }
           `}
         </style>
