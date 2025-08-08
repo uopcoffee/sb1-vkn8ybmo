@@ -20,9 +20,9 @@ const CaseStudies: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {caseStudies.map((cs, idx) => (
             <div key={idx} className="card p-6">
-              <div className="text-sm text-primary-400 mb-1">{cs.company}</div>
-              <div className="font-semibold text-primary-700 mb-2">{cs.summary}</div>
-              <div className="text-primary-500">{cs.result}</div>
+              <div className="text-sm text-primary-600 mb-1">{cs.company}</div>
+              <div className="font-semibold text-primary-800 mb-2">{cs.summary}</div>
+              <div className="text-primary-700">{cs.result}</div>
             </div>
           ))}
         </div>

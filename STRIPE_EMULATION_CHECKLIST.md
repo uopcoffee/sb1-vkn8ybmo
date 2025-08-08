@@ -65,8 +65,8 @@ Reference patterns and IA from https://stripe.com/.
 
 ### Performance and accessibility
 - [x] Keyboard and screen‑reader support for mega‑menu (roles, labels, focus)
-- [ ] Maintain 4.5:1 contrast ratios
-- [ ] Lazy‑load heavy sections/media
+- [ ] Maintain 4.5:1 contrast ratios (in progress)
+- [x] Lazy‑load heavy sections/media
 - [ ] Keep LCP < 2.5s (check Lighthouse)
 
 ### Suggested implementation order
