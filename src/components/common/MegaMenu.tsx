@@ -62,21 +62,6 @@ const DEFAULT_GROUPS: MenuGroup[] = [
       },
     ],
   },
-  {
-    id: 'resources',
-    label: 'Resources',
-    columns: [
-      {
-        heading: 'Learn',
-        items: [
-          { title: 'Resources overview', description: 'Blog, guides, FAQs', to: '/resources' },
-          { title: 'Blog', description: 'Insights on finance ops', to: '/blog' },
-          { title: 'FAQ', description: 'Answers to common questions', to: '/faq' },
-          { title: 'Contact', description: 'Talk to our team', to: '/contact' },
-        ],
-      },
-    ],
-  },
 ];
 
 function useOutsideClick<T extends HTMLElement>(onOutside: () => void) {
