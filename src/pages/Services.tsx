@@ -7,6 +7,7 @@ import CaseStudies from '../components/services/CaseStudies';
 import ServicesCTA from '../components/services/ServicesCTA';
 import HeroSection from '../components/common/HeroSection';
 import Breadcrumbs from '../components/layout/Breadcrumbs';
+import PricingTable from '../components/common/PricingTable';
 
 const Services: React.FC = () => {
   useEffect(() => {
@@ -67,6 +68,11 @@ const Services: React.FC = () => {
       {/* Case Studies Section */}
       <Section>
         <CaseStudies />
+      </Section>
+
+      {/* Pricing Section */}
+      <Section>
+        <PricingTable />
       </Section>
 
       {/* CTA Section */}

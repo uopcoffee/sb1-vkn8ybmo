@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import MegaMenu from '../common/MegaMenu';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,7 +26,7 @@ const Header: React.FC = () => {
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'py-4 bg-white/90 backdrop-blur-sm shadow-sm' : 'py-6'
+        isScrolled ? 'py-3 bg-white/90 backdrop-blur-sm shadow-sm' : 'py-5'
       }`}
       role="banner"
     >
@@ -45,57 +46,10 @@ const Header: React.FC = () => {
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center space-x-8">
-          <Link
-            to="/"
-            className={`text-primary-700 hover:text-accent-900 transition-colors ${isActive('/') ? 'font-semibold' : ''}`}
-            aria-current={isActive('/') ? 'page' : undefined}
-            onMouseEnter={() => import('../../pages/Home')}
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            className={`text-primary-700 hover:text-accent-900 transition-colors ${isActive('/about') ? 'font-semibold' : ''}`}
-            aria-current={isActive('/about') ? 'page' : undefined}
-            onMouseEnter={() => import('../../pages/About')}
-          >
-            About
-          </Link>
-          <Link
-            to="/services"
-            className={`text-primary-700 hover:text-accent-900 transition-colors ${isActive('/services') ? 'font-semibold' : ''}`}
-            aria-current={isActive('/services') ? 'page' : undefined}
-            onMouseEnter={() => import('../../pages/Services')}
-          >
-            Services
-          </Link>
-          <Link
-            to="/faq"
-            className={`text-primary-700 hover:text-accent-500 transition-colors ${isActive('/faq') ? 'font-semibold' : ''}`}
-            aria-current={isActive('/faq') ? 'page' : undefined}
-            onMouseEnter={() => import('../../pages/FAQ')}
-          >
-            FAQ
-          </Link>
-          <Link
-            to="/blog"
-            className={`text-primary-700 hover:text-accent-500 transition-colors ${isActive('/blog') ? 'font-semibold' : ''}`}
-            aria-current={isActive('/blog') ? 'page' : undefined}
-            onMouseEnter={() => import('../../pages/blog/BlogList')}
-          >
-            Blog
-          </Link>
-          <Link
-            to="/contact"
-            className="btn btn-primary rounded-full bg-secondary-500 hover:bg-accent-500 text-white px-6 py-3"
-            onClick={() => console.log('Header CTA clicked')}
-            aria-label="Schedule a consultation"
-          >
-            Schedule a consultation
-          </Link>
-        </div>
+        {/* Desktop navigation with mega menu */}
+        <MegaMenu />
 
+        {/* Mobile menu toggle */}
         <button
           className="md:hidden text-primary-700 w-11 h-11 flex items-center justify-center"
           aria-label="Toggle menu"
@@ -111,29 +65,39 @@ const Header: React.FC = () => {
       {isMenuOpen && (
         <div id="mobile-menu" className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden" role="menu" aria-label="Mobile">
           <div className="container-custom py-4 flex flex-col space-y-4">
-            <Link to="/" className="text-primary-700 hover:text-accent-900 transition-colors" role="menuitem" onClick={() => setIsMenuOpen(false)}>
-              Home
-            </Link>
-            <Link to="/about" className="text-primary-700 hover:text-accent-900 transition-colors" role="menuitem" onClick={() => setIsMenuOpen(false)}>
-              About
+            <Link to="/services" className="text-primary-700 hover:text-accent-900 transition-colors" role="menuitem" onClick={() => setIsMenuOpen(false)}>
+              Products
             </Link>
             <Link to="/services" className="text-primary-700 hover:text-accent-900 transition-colors" role="menuitem" onClick={() => setIsMenuOpen(false)}>
-              Services
-            </Link>
-            <Link to="/faq" className="text-primary-700 hover:text-accent-500 transition-colors" role="menuitem" onClick={() => setIsMenuOpen(false)}>
-              FAQ
+              Solutions
             </Link>
             <Link to="/blog" className="text-primary-700 hover:text-accent-500 transition-colors" role="menuitem" onClick={() => setIsMenuOpen(false)}>
-              Blog
+              Resources
             </Link>
-            <Link
-              to="/contact"
-              className="btn btn-primary rounded-full bg-secondary-500 hover:bg-accent-500 text-white w-full text-center px-6 py-3"
-              onClick={() => { console.log('Header CTA clicked'); setIsMenuOpen(false); }}
-              role="menuitem"
-            >
-              Schedule a consultation
+            <Link to="/pricing" className="text-primary-700 hover:text-accent-500 transition-colors" role="menuitem" onClick={() => setIsMenuOpen(false)}>
+              Pricing
             </Link>
+            <Link to="/contact" className="text-primary-700 hover:text-accent-500 transition-colors" role="menuitem" onClick={() => setIsMenuOpen(false)}>
+              Contact
+            </Link>
+            <div className="pt-2 grid grid-cols-2 gap-3">
+              <Link
+                to="/contact"
+                className="btn btn-accent rounded-full w-full text-center px-6 py-3"
+                onClick={() => { setIsMenuOpen(false); }}
+                role="menuitem"
+              >
+                Start now
+              </Link>
+              <Link
+                to="/contact"
+                className="btn btn-outline rounded-full w-full text-center px-6 py-3"
+                onClick={() => { setIsMenuOpen(false); }}
+                role="menuitem"
+              >
+                Contact sales
+              </Link>
+            </div>
           </div>
         </div>
       )}

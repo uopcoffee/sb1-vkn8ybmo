@@ -1,10 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import React, { lazy, Suspense } from 'react';
-import { ArrowRightCircle } from 'lucide-react';
-const ClipboardCheck = lazy(() => import('lucide-react').then(m => ({ default: m.ClipboardCheck })));
-const BarChart3 = lazy(() => import('lucide-react').then(m => ({ default: m.BarChart3 })));
+import { motion } from 'framer-motion';
+import { ArrowRightCircle, ClipboardCheck, BarChart3 } from 'lucide-react';
 import Button from '../common/Button';
+import CodeBlock from '../common/CodeBlock';
 const TeamImg = {
   src: '/team-dynamics.svg',
   width: 1200,
@@ -19,11 +17,7 @@ const FinancialImg = {
 const HowItWorks: React.FC = () => {
   const steps = [
     {
-      icon: (
-        <Suspense fallback={<div className="w-12 h-12 bg-white/10 rounded-full" />}> 
-          <ClipboardCheck className="w-12 h-12 text-accent-900" />
-        </Suspense>
-      ),
+      icon: <ClipboardCheck className="w-12 h-12 text-accent-900" />,
       title: 'Flexible scope',
       description: 'hourly or project based—no long-term lock-in',
     },
@@ -33,20 +27,12 @@ const HowItWorks: React.FC = () => {
       description: 'U.S. leadership plus a vetted offshore team for 24-hour momentum and predictable cost',
     },
     {
-      icon: (
-        <Suspense fallback={<div className="w-12 h-12 bg-white/10 rounded-full" />}> 
-          <BarChart3 className="w-12 h-12 text-accent-900" />
-        </Suspense>
-      ),
+      icon: <BarChart3 className="w-12 h-12 text-accent-900" />,
       title: 'Integrated stack',
       description: 'best-in-class tools stitched together for efficiency, insight, and audit-ready data',
     },
     {
-      icon: (
-        <Suspense fallback={<div className="w-12 h-12 bg-white/10 rounded-full" />}> 
-          <ClipboardCheck className="w-12 h-12 text-accent-900" />
-        </Suspense>
-      ),
+      icon: <ClipboardCheck className="w-12 h-12 text-accent-900" />,
       title: 'Partner mindset',
       description: 'tight coordination with auditors, tax, and legal so nothing falls through the cracks',
     },
@@ -70,6 +56,15 @@ const HowItWorks: React.FC = () => {
       transition: { duration: 0.5 }
     }
   };
+
+  const closeChecklist = `{
+  "monthEndClose": [
+    { "task": "Reconcile bank accounts", "owner": "AP", "status": "pending" },
+    { "task": "Revenue recognition (ASC 606)", "owner": "GL", "status": "pending" },
+    { "task": "Accruals & deferrals", "owner": "GL", "status": "pending" },
+    { "task": "Management reporting", "owner": "FP&A", "status": "pending" }
+  ]
+}`;
 
   return (
     <section className="py-20 bg-gradient-to-br from-primary-500 to-primary-600">
@@ -184,6 +179,10 @@ const HowItWorks: React.FC = () => {
               </Button>
             </div>
           </motion.div>
+        </div>
+
+        <div className="mt-16">
+          <CodeBlock title="Monthly Close Checklist" language="json" code={closeChecklist} />
         </div>
       </div>
     </section>
