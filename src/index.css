@@ -81,7 +81,7 @@
   }
   
   body {
-    @apply bg-white text-primary-500 antialiased;
+    @apply bg-white text-primary-700 antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
