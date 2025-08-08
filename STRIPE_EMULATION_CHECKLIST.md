@@ -41,7 +41,7 @@ Reference patterns and IA from https://stripe.com/.
 ### Motion and visuals
 - [x] Adopt Stripe‑like gradients and depth across sections
 - [x] Respect `prefers-reduced-motion`
-- [ ] Add staggered entrances and gentle hover lifts (Framer Motion)
+- [x] Add staggered entrances and gentle hover lifts (Framer Motion)
 
 ### Design system adjustments
 - [x] Colors in `tailwind.config.js`

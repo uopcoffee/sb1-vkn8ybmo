@@ -1,5 +1,6 @@
 import React from 'react';
 import { Briefcase, BarChart2, Shield } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const features = [
   {
@@ -40,20 +41,33 @@ const WhyChoose: React.FC = () => {
             Finance infrastructure that scales—from first close to enterprise-ready.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            hidden: { opacity: 1 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.12 },
+            },
+          }}
+        >
           {features.map((feature, index) => (
-            <div
+            <motion.div
               key={index}
-              className="text-center px-6 py-8 bg-primary-50 rounded-lg shadow-section"
+              className="text-center px-6 py-8 bg-primary-50 rounded-lg shadow-section transition-transform duration-200 hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+              variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
             >
               <div className="mb-4 flex justify-center">{feature.icon}</div>
               <h3 className="text-xl font-bold mb-2 text-primary-500">
                 {feature.title}
               </h3>
               <p className="text-primary-500/80">{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
