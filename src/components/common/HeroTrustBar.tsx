@@ -1,11 +1,11 @@
 import React from 'react';
 
 const heroTrustLogos = [
-  { name: 'Muon Space', src: '/ballast_logo.svg' },
-  { name: 'Gappify', src: '/ballast_logo.svg' },
-  { name: 'Airkit', src: '/ballast_logo.svg' },
-  { name: 'Productiv', src: '/ballast_logo.svg' },
-  { name: 'Voyage Foods', src: '/ballast_logo.svg' },
+  { name: 'Muon Space', src: '/logos/muon-space.svg' },
+  { name: 'Gappify', src: '/logos/gappify.svg' },
+  { name: 'Airkit', src: '/logos/airkit.svg' },
+  { name: 'Productiv', src: '/logos/productiv.svg' },
+  { name: 'Voyage Foods', src: '/logos/voyage-foods.svg' },
 ];
 
 const HeroTrustBar: React.FC = () => {

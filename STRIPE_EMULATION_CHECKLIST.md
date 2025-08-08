@@ -25,7 +25,7 @@ Reference patterns and IA from https://stripe.com/.
 ### Proof and customer stories
 - [x] **Case studies row** on `src/pages/Services.tsx` using `src/components/services/CaseStudies.tsx`
 - [x] **Trust section** in `src/components/home/TrustSection.tsx`
-  - [ ] Real logos (replace placeholders)
+  - [x] Real logos (replace placeholders)
   - [x] Compact carousel (accessible)
 
 ### Pricing (Stripe‑style transparency)
