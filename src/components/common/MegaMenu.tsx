@@ -1,5 +1,5 @@
 import React, { useEffect, useId, useMemo, useRef, useState } from 'react';
-import { ChevronRight, ExternalLink, Layers, LineChart, Sparkles, BookOpen, Briefcase, Building2 } from 'lucide-react';
+import { ChevronRight, ExternalLink, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface MenuLinkItem {
@@ -69,6 +69,7 @@ const DEFAULT_GROUPS: MenuGroup[] = [
       {
         heading: 'Learn',
         items: [
+          { title: 'Resources overview', description: 'Blog, guides, FAQs', to: '/resources' },
           { title: 'Blog', description: 'Insights on finance ops', to: '/blog' },
           { title: 'FAQ', description: 'Answers to common questions', to: '/faq' },
           { title: 'Contact', description: 'Talk to our team', to: '/contact' },
@@ -139,7 +140,6 @@ const MegaMenu: React.FC<{ groups?: MenuGroup[] }> = ({ groups = DEFAULT_GROUPS 
       case 'ArrowDown':
         e.preventDefault();
         setOpenGroupId(groupId);
-        // focus first link in panel after opening
         setTimeout(() => {
           const panel = document.getElementById(groupIdToPanelId.get(groupId) || '');
           const firstLink = panel?.querySelector<HTMLElement>('a, button');
@@ -169,9 +169,6 @@ const MegaMenu: React.FC<{ groups?: MenuGroup[] }> = ({ groups = DEFAULT_GROUPS 
                 aria-controls={panelId}
                 onMouseEnter={() => setOpenGroupId(group.id)}
                 onFocus={() => setOpenGroupId(group.id)}
-                onBlur={(e) => {
-                  // close only if focus leaves the whole menu later via outside click handler
-                }}
                 onKeyDown={(e) => onTriggerKeyDown(e, index, group.id)}
                 data-mega-trigger={menubarId}
               >
@@ -190,38 +187,25 @@ const MegaMenu: React.FC<{ groups?: MenuGroup[] }> = ({ groups = DEFAULT_GROUPS 
                   onMouseLeave={() => closeMenu()}
                 >
                   {group.columns.map((col, cIdx) => (
-                    <div key={cIdx} className="">
+                    <div key={cIdx}>
                       <div className="text-xs uppercase tracking-wide text-primary-400 mb-3">{col.heading}</div>
                       <ul className="space-y-2">
                         {col.items.map((item, iIdx) => (
                           <li key={iIdx}>
                             {item.external ? (
-                              <a
-                                href={item.to}
-                                target="_blank"
-                                rel="noreferrer noopener"
-                                className="group flex items-start gap-3 rounded-md p-3 hover:bg-neutral-100 focus-visible:ring-2 focus-visible:ring-accent-500"
-                              >
+                              <a href={item.to} target="_blank" rel="noreferrer noopener" className="group flex items-start gap-3 rounded-md p-3 hover:bg-neutral-100 focus-visible:ring-2 focus-visible:ring-accent-500">
                                 <ExternalLink className="h-4 w-4 mt-0.5 text-primary-300" />
                                 <span>
                                   <span className="block font-semibold text-primary-700 group-hover:text-accent-900">{item.title}</span>
-                                  {item.description && (
-                                    <span className="block text-sm text-primary-400">{item.description}</span>
-                                  )}
+                                  {item.description && (<span className="block text-sm text-primary-400">{item.description}</span>)}
                                 </span>
                               </a>
                             ) : (
-                              <Link
-                                to={item.to}
-                                className="group flex items-start gap-3 rounded-md p-3 hover:bg-neutral-100 focus-visible:ring-2 focus-visible:ring-accent-500"
-                                onClick={closeMenu}
-                              >
+                              <Link to={item.to} className="group flex items-start gap-3 rounded-md p-3 hover:bg-neutral-100 focus-visible:ring-2 focus-visible:ring-accent-500" onClick={closeMenu}>
                                 <Sparkles className="h-4 w-4 mt-0.5 text-primary-300" />
                                 <span>
                                   <span className="block font-semibold text-primary-700 group-hover:text-accent-900">{item.title}</span>
-                                  {item.description && (
-                                    <span className="block text-sm text-primary-400">{item.description}</span>
-                                  )}
+                                  {item.description && (<span className="block text-sm text-primary-400">{item.description}</span>)}
                                 </span>
                               </Link>
                             )}
@@ -232,12 +216,8 @@ const MegaMenu: React.FC<{ groups?: MenuGroup[] }> = ({ groups = DEFAULT_GROUPS 
                   ))}
 
                   <div className="col-span-2 -mx-3 mt-2 flex items-center gap-3">
-                    <Link to="/contact" className="btn btn-accent btn-md rounded-full px-5" onClick={closeMenu}>
-                      Start now
-                    </Link>
-                    <Link to="/contact" className="btn btn-outline btn-md rounded-full px-5" onClick={closeMenu}>
-                      Contact sales
-                    </Link>
+                    <Link to="/contact" className="btn btn-accent btn-md rounded-full px-5" onClick={closeMenu}>Start now</Link>
+                    <Link to="/contact" className="btn btn-outline btn-md rounded-full px-5" onClick={closeMenu}>Contact sales</Link>
                   </div>
                 </div>
               )}
@@ -245,16 +225,10 @@ const MegaMenu: React.FC<{ groups?: MenuGroup[] }> = ({ groups = DEFAULT_GROUPS 
           );
         })}
 
-        {/* Direct links */}
-        <Link to="/pricing" className="px-3 py-2 rounded-md text-primary-700 hover:text-accent-900 hover:bg-neutral-100">
-          Pricing
-        </Link>
-        <Link to="/contact" className="px-3 py-2 rounded-md text-primary-700 hover:text-accent-900 hover:bg-neutral-100">
-          Contact
-        </Link>
+        <Link to="/pricing" className="px-3 py-2 rounded-md text-primary-700 hover:text-accent-900 hover:bg-neutral-100">Pricing</Link>
+        <Link to="/resources" className="px-3 py-2 rounded-md text-primary-700 hover:text-accent-900 hover:bg-neutral-100">Resources</Link>
       </div>
 
-      {/* Persistent CTAs */}
       <div className="ml-4 flex items-center gap-2">
         <Link to="/contact" className="btn btn-accent btn-md rounded-full px-5">Start now</Link>
         <Link to="/contact" className="btn btn-outline btn-md rounded-full px-5">Contact sales</Link>

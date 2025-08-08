@@ -11,6 +11,8 @@ const EULA = lazy(() => import('./pages/EULA'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const BlogList = lazy(() => import('./pages/blog/BlogList'));
 const BlogPost = lazy(() => import('./pages/blog/BlogPost'));
+const Pricing = lazy(() => import('./pages/Pricing'));
+const Resources = lazy(() => import('./pages/Resources'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="services" element={<Services />} />
           <Route path="faq" element={<FAQ />} />
+          <Route path="pricing" element={<Pricing />} />
+          <Route path="resources" element={<Resources />} />
           <Route path="contact" element={<Contact />} />
           <Route path="eula" element={<EULA />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
