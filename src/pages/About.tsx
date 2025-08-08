@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Section from '../components/common/Section';
 import Button from '../components/common/Button';
 import HeroSection from '../components/common/HeroSection';
+import Breadcrumbs from '../components/layout/Breadcrumbs';
 
 const About: React.FC = () => {
   useEffect(() => {
@@ -16,6 +17,7 @@ const About: React.FC = () => {
         title="About – Ballast Financial | Startup CFO & Accounting"
         description="Learn about our mission and team. Ballast Financial provides outsourced CFO services and financial operations for growth-focused startups."
         canonicalPath="/about"
+        ogType="website"
         structuredData={{
           '@context': 'https://schema.org',
           '@type': 'AboutPage',
@@ -25,14 +27,17 @@ const About: React.FC = () => {
       />
 
       {/* Hero Section */}
+      <div className="container-custom mt-4">
+        <Breadcrumbs />
+      </div>
       <HeroSection
-        title="Our Mission"
-        subtitle="We're building the financial backbone for the next generation of innovative companies."
+        title="Anchoring your growth with solid finance operations"
+        subtitle="We pair seasoned finance leadership with a global team and automation to build your company’s financial backbone."
         gradientClass="bg-gradient-to-br from-primary-600 to-primary-700"
         textWhite
       >
         <p className="mb-8 text-white/80">
-          We founded Ballast Financial with a clear purpose: give founders and their teams the financial clarity and infrastructure needed to build great products and grow their business.
+          We founded Ballast to give founders reliable financial infrastructure—clear reporting, tight controls, and processes that scale.
         </p>
         <Button
           variant="secondary"
@@ -76,8 +81,7 @@ const About: React.FC = () => {
             </p>
             <div className="mt-12 text-center">
               <p className="text-xl font-medium italic text-primary-500 mb-8">
-                "Our mission is to anchor growing startups with solid financial operations,
-                allowing founders to steer with confidence."
+                 "We anchor growing startups with solid finance operations so founders can steer with confidence."
               </p>
             </div>
           </motion.div>

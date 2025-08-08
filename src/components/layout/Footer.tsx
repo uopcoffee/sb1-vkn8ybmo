@@ -16,6 +16,9 @@ const Footer: React.FC = () => {
                 alt="Ballast Financial"
                 className="h-10 w-auto brightness-0 invert"
                 loading="lazy"
+                width="120"
+                height="40"
+                decoding="async"
               />
               <span className="brand-text text-2xl font-semibold text-white">
                 Ballast Financial

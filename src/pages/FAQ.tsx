@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Meta from '../components/Meta';
 import HeroSection from '../components/common/HeroSection';
+import Breadcrumbs from '../components/layout/Breadcrumbs';
 
 const FAQ: React.FC = () => {
   const faqs = [
@@ -24,6 +25,7 @@ const FAQ: React.FC = () => {
       <Meta
         title="FAQ – Ballast Financial"
         description="Frequently asked questions about Ballast Financial services."
+        ogType="website"
         canonicalPath="/faq"
         structuredData={{
           '@context': 'https://schema.org',
@@ -38,6 +40,9 @@ const FAQ: React.FC = () => {
           }))
         }}
       />
+      <div className="container-custom mt-4">
+        <Breadcrumbs />
+      </div>
       <HeroSection title="Frequently Asked Questions" />
       <section className="py-20">
         <div className="container-custom space-y-8">

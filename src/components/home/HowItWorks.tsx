@@ -1,12 +1,29 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ClipboardCheck, ArrowRightCircle, BarChart3 } from 'lucide-react';
+import React, { lazy, Suspense } from 'react';
+import { ArrowRightCircle } from 'lucide-react';
+const ClipboardCheck = lazy(() => import('lucide-react').then(m => ({ default: m.ClipboardCheck })));
+const BarChart3 = lazy(() => import('lucide-react').then(m => ({ default: m.BarChart3 })));
 import Button from '../common/Button';
+const TeamImg = {
+  src: '/team-dynamics.svg',
+  width: 1200,
+  height: 400,
+};
+const FinancialImg = {
+  src: '/financial-visual.svg',
+  width: 1200,
+  height: 400,
+};
 
 const HowItWorks: React.FC = () => {
   const steps = [
     {
-      icon: <ClipboardCheck className="w-12 h-12 text-accent-900" />,
+      icon: (
+        <Suspense fallback={<div className="w-12 h-12 bg-white/10 rounded-full" />}> 
+          <ClipboardCheck className="w-12 h-12 text-accent-900" />
+        </Suspense>
+      ),
       title: 'Flexible scope',
       description: 'hourly or project based—no long-term lock-in',
     },
@@ -16,12 +33,20 @@ const HowItWorks: React.FC = () => {
       description: 'U.S. leadership plus a vetted offshore team for 24-hour momentum and predictable cost',
     },
     {
-      icon: <BarChart3 className="w-12 h-12 text-accent-900" />,
+      icon: (
+        <Suspense fallback={<div className="w-12 h-12 bg-white/10 rounded-full" />}> 
+          <BarChart3 className="w-12 h-12 text-accent-900" />
+        </Suspense>
+      ),
       title: 'Integrated stack',
       description: 'best-in-class tools stitched together for efficiency, insight, and audit-ready data',
     },
     {
-      icon: <ClipboardCheck className="w-12 h-12 text-accent-900" />,
+      icon: (
+        <Suspense fallback={<div className="w-12 h-12 bg-white/10 rounded-full" />}> 
+          <ClipboardCheck className="w-12 h-12 text-accent-900" />
+        </Suspense>
+      ),
       title: 'Partner mindset',
       description: 'tight coordination with auditors, tax, and legal so nothing falls through the cracks',
     },
@@ -99,10 +124,13 @@ const HowItWorks: React.FC = () => {
             className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10"
           >
             <img
-              src="/team-dynamics.svg"
+              src={TeamImg.src}
               alt="Team collaboration graphic"
               className="w-full h-48 object-cover rounded-lg mb-6"
               loading="lazy"
+              width={TeamImg.width}
+              height={TeamImg.height}
+              decoding="async"
             />
             <h3 className="text-2xl font-bold text-white mb-4 text-center">
               Discover Our Story
@@ -131,10 +159,13 @@ const HowItWorks: React.FC = () => {
             className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10"
           >
             <img
-              src="/financial-visual.svg"
+              src={FinancialImg.src}
               alt="Financial services graphic"
               className="w-full h-48 object-cover rounded-lg mb-6"
               loading="lazy"
+              width={FinancialImg.width}
+              height={FinancialImg.height}
+              decoding="async"
             />
             <h3 className="text-2xl font-bold text-white mb-4 text-center">
               Explore What We Offer

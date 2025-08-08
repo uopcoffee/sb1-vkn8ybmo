@@ -37,7 +37,7 @@ const WhyChoose: React.FC = () => {
             Why Ballast
           </h2>
           <p className="text-lg text-primary-500/80">
-            Startup specialists, global scale, and built-in efficiency.
+            Finance infrastructure that scales—from first close to enterprise-ready.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

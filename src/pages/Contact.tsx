@@ -6,6 +6,7 @@ import CalendlyEmbed from '../components/contact/CalendlyEmbed';
 import ContactInfo from '../components/contact/ContactInfo';
 import Button from '../components/common/Button';
 import HeroSection from '../components/common/HeroSection';
+import Breadcrumbs from '../components/layout/Breadcrumbs';
 
 const Contact: React.FC = () => {
   useEffect(() => {
@@ -18,6 +19,7 @@ const Contact: React.FC = () => {
         title="Contact – Ballast Financial | Startup CFO & Accounting"
         description="Get in touch with Ballast Financial for expert startup finance guidance. Schedule a consultation or message our team today."
         canonicalPath="/contact"
+        ogType="website"
         structuredData={[
           {
             '@context': 'https://schema.org',
@@ -48,9 +50,12 @@ const Contact: React.FC = () => {
         ]}
       />
       {/* Hero Section */}
+      <div className="container-custom mt-4">
+        <Breadcrumbs />
+      </div>
       <HeroSection
-        title="Let's talk about your financial future"
-        subtitle="Schedule a discovery call or reach out through any of our channels. We typically respond within 24 hours."
+        title="Talk with our team"
+        subtitle="Book a 30‑minute discovery call or send us a note—most inquiries get a same‑day response."
       />
 
       <section className="py-20 bg-white">

@@ -35,6 +35,10 @@ const Header: React.FC = () => {
             src="/ballast_logo.svg" 
             alt="Ballast Financial" 
             className="h-10 w-auto"
+            width="120"
+            height="40"
+            decoding="async"
+            fetchpriority="high"
           />
           <span className="brand-text text-2xl font-semibold text-primary-700">
             Ballast Financial

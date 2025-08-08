@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Meta from '../../components/Meta';
 import HeroSection from '../../components/common/HeroSection';
+import Breadcrumbs from '../../components/layout/Breadcrumbs';
 
 const posts = [
   { slug: 'welcome', title: 'Welcome to the Ballast Blog' },
@@ -15,12 +16,18 @@ const BlogList: React.FC = () => {
 
   return (
     <div className="pt-24">
-      <Meta title="Blog – Ballast Financial" canonicalPath="/blog" structuredData={{
+      <Meta title="Blog – Ballast Financial" canonicalPath="/blog" ogType="website" structuredData={{
         '@context': 'https://schema.org',
         '@type': 'Blog',
         name: 'Ballast Financial Blog',
         url: 'https://ballastfinancial.com/blog'
       }} />
+      {/* Prefetch likely blog posts */}
+      <link rel="prefetch" href="/blog/welcome" />
+      <link rel="prefetch" href="/blog/outsourced-cfo" />
+      <div className="container-custom mt-4">
+        <Breadcrumbs />
+      </div>
       <HeroSection title="Blog" />
       <section className="py-20">
         <div className="container-custom">

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Meta from '../../components/Meta';
 import HeroSection from '../../components/common/HeroSection';
+import Breadcrumbs from '../../components/layout/Breadcrumbs';
 
 const BlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -15,6 +16,7 @@ const BlogPost: React.FC = () => {
       <Meta
         title={`${slug ?? ''} – Ballast Blog`}
         canonicalPath={`/blog/${slug ?? ''}`}
+        ogType="article"
         structuredData={{
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
@@ -30,6 +32,9 @@ const BlogPost: React.FC = () => {
         }}
       />
       <HeroSection title={slug ?? ''} />
+      <div className="container-custom mt-4">
+        <Breadcrumbs />
+      </div>
       <section className="py-20">
         <div className="container-custom">
           <p className="text-primary-500/80">This is a placeholder for the blog post content.</p>

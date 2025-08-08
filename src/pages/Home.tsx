@@ -18,6 +18,7 @@ const Home: React.FC = () => {
         title="Ballast Financial – Startup CFO & Accounting Services"
         description="Outsourced CFO, accounting, and finance operations for venture-backed startups. Ballast Financial streamlines your financial processes and provides steady guidance so you can scale with confidence."
         canonicalPath="/"
+        ogType="website"
         structuredData={[
           {
             '@context': 'https://schema.org',
@@ -56,6 +57,10 @@ const Home: React.FC = () => {
         ]}
       />
       <Hero />
+      {/* Prefetch likely next routes */}
+      <link rel="prefetch" href="/about" />
+      <link rel="prefetch" href="/services" />
+      <link rel="prefetch" href="/contact" />
       <React.Suspense fallback={<div className="text-center py-12">Loading…</div>}>
         <HowItWorks />
         <WhyChoose />

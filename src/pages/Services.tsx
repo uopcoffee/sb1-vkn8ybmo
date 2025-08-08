@@ -6,6 +6,7 @@ import ServicesGrid from '../components/home/ServicesGrid';
 import CaseStudies from '../components/services/CaseStudies';
 import ServicesCTA from '../components/services/ServicesCTA';
 import HeroSection from '../components/common/HeroSection';
+import Breadcrumbs from '../components/layout/Breadcrumbs';
 
 const Services: React.FC = () => {
   useEffect(() => {
@@ -18,6 +19,7 @@ const Services: React.FC = () => {
         title="Services – Ballast Financial | Startup Finance & Accounting"
         description="Explore our outsourced CFO, accounting, and finance services built for venture-backed startups. Let Ballast streamline your books and reporting."
         canonicalPath="/services"
+        ogType="website"
         structuredData={{
           '@context': 'https://schema.org',
           '@type': 'WebPage',
@@ -31,9 +33,12 @@ const Services: React.FC = () => {
         }}
       />
       {/* Hero Section */}
+      <div className="container-custom mt-4">
+        <Breadcrumbs />
+      </div>
       <HeroSection
-        title="Financial Services for Growing Startups"
-        subtitle="We handle your daily accounting, payroll and reporting while guiding high-level finance strategy so you can scale confidently."
+        title="CFO, accounting, and finance built to scale"
+        subtitle="We run your close, payroll, AP/AR, and reporting—and provide the senior finance guidance to navigate what’s next."
         gradientClass="bg-gradient-to-br from-primary-600 to-primary-700"
         textWhite
       />

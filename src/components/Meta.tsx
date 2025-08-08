@@ -7,6 +7,7 @@ interface MetaProps {
   canonicalPath?: string;
   noindex?: boolean;
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
+  ogType?: 'website' | 'article' | string;
 }
 
 const ensureMetaTag = (selector: string, createAttrs: Record<string, string>) => {
@@ -42,7 +43,7 @@ const asAbsoluteUrl = (pathOrUrl?: string) => {
   }
 };
 
-const Meta: React.FC<MetaProps> = ({ title, description, image, canonicalPath, noindex, structuredData }) => {
+const Meta: React.FC<MetaProps> = ({ title, description, image, canonicalPath, noindex, structuredData, ogType }) => {
   useEffect(() => {
     const absImage = asAbsoluteUrl(image ?? '/ballast-brand-background.svg');
     const canonicalUrl = asAbsoluteUrl(canonicalPath ?? window.location.pathname);
@@ -81,6 +82,10 @@ const Meta: React.FC<MetaProps> = ({ title, description, image, canonicalPath, n
     // og:site_name for consistency
     const siteName = ensureMetaTag('meta[property="og:site_name"]', { property: 'og:site_name' });
     siteName.setAttribute('content', 'Ballast Financial');
+
+    // og:type
+    const ogTypeTag = ensureMetaTag('meta[property="og:type"]', { property: 'og:type' });
+    ogTypeTag.setAttribute('content', ogType ?? 'website');
 
     // Canonical link
     if (canonicalUrl) {

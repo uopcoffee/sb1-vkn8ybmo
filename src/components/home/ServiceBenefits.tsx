@@ -45,10 +45,10 @@ const ServiceBenefits: React.FC = () => {
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Financial Operations Built for Growth
+            Finance that accelerates, not slows down
           </h2>
           <p className="text-lg text-gray-200">
-            We help venture-backed startups build solid financial foundations so they can scale with confidence.
+            Build a reliable finance engine: crisp financials, clear runway, and fewer surprises.
           </p>
         </div>
 
