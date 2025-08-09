@@ -71,7 +71,7 @@ const Header: React.FC = () => {
             <Link to="/services" className="text-primary-700 hover:text-accent-900 transition-colors" role="menuitem" onClick={() => setIsMenuOpen(false)}>
               Solutions
             </Link>
-            <Link to="/blog" className="text-primary-700 hover:text-accent-500 transition-colors" role="menuitem" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/resources" className="text-primary-700 hover:text-accent-500 transition-colors" role="menuitem" onClick={() => setIsMenuOpen(false)}>
               Resources
             </Link>
             <Link to="/pricing" className="text-primary-700 hover:text-accent-500 transition-colors" role="menuitem" onClick={() => setIsMenuOpen(false)}>
